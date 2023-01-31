@@ -1,16 +1,17 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "ES6", // JS문법 버젼 설정
     "lib": [
       "dom",
       "dom.iterable",
       "esnext"
     ],
+    "outDir": "./dist", // 컴파일했을 때 js 파일이 이 안으로 모두 이동
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
-    "strict": true,
+    "strict": true, // 엄격하게 타입스크립트 검사를 실행하는 옵션
     "forceConsistentCasingInFileNames": true,
     "noFallthroughCasesInSwitch": true,
     "module": "esnext",
@@ -21,6 +22,6 @@
     "jsx": "react-jsx"
   },
   "include": [
-    "src"
+    "src" // 컴파일할 파일이 모여잇는 파일 경로 / 반대로 포함하지 않는 경로는 exclude로 설정 가능
   ]
 }
