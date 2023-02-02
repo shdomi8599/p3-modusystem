@@ -1,5 +1,66 @@
+@font-face {
+  font-family: 'GoyangIlsan';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/GoyangIlsan.woff') format('woff');
+  font-style: normal;
+  
+}
+
 *{
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-family: 'GoyangIlsan';
+  background-color: #388FE4;
 }
+
+/* 네비 */
+
+header {
+  background-color: #388FE4;
+}
+
+nav {
+  margin: 0 15vw;
+  color: white;
+}
+
+#nav_header{
+  text-align: right;
+  padding: 1.5vh 0;
+}
+
+#nav_ul{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  text-align: center;
+
+}
+
+#nav_title{
+  flex: 2;
+  font-size: 2.5rem;
+}
+
+#nav_header_content{
+  font-size: 0.9rem;
+  margin: 0 3vw;
+}
+
+.nav_li{
+  flex: 1;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.3rem;
+}
+
+/* 스케일을 활용해서 border를 1px보다 얇게 만듬 https://brunch.co.kr/@euid/6에서 참고  */
+.w0_5 {    
+  transform: scaleY(0.3);
+  border-bottom: 1px solid white;
+  margin: 0 -15vw;
+}
+
