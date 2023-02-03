@@ -2,18 +2,18 @@
   font-family: 'GoyangIlsan';
   src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/GoyangIlsan.woff') format('woff');
   font-style: normal;
-  
+
 }
 
-*{
+* {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
   font-family: 'GoyangIlsan';
-  background-color: #388FE4;
+
 }
 
-/* 네비 */
+/* Header */
 
 header {
   background-color: #388FE4;
@@ -24,12 +24,17 @@ nav {
   color: white;
 }
 
-#nav_header{
+#nav_header {
   text-align: right;
-  padding: 1.5vh 0;
+
 }
 
-#nav_ul{
+#modu_logo {
+  width: 300px;
+  height: 66px;
+}
+
+#nav_ul {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -38,17 +43,19 @@ nav {
 
 }
 
-#nav_title{
+#nav_title {
   flex: 2;
   font-size: 2.5rem;
 }
 
-#nav_header_content{
+#nav_header_content {
   font-size: 0.9rem;
-  margin: 0 3vw;
+  margin: 0 17.4vw;
+  padding: 1.5vh 0;
+  color: white;
 }
 
-.nav_li{
+.nav_li {
   flex: 1;
   height: 10vh;
   display: flex;
@@ -58,9 +65,108 @@ nav {
 }
 
 /* 스케일을 활용해서 border를 1px보다 얇게 만듬 https://brunch.co.kr/@euid/6에서 참고  */
-.w0_5 {    
+.w0_5 {
   transform: scaleY(0.3);
   border-bottom: 1px solid white;
-  margin: 0 -15vw;
+}
+
+/* Main */
+
+#main {
+  background-color: #388FE4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 75vh;
+  flex-direction: column;
+  color: white;
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+}
+
+#main_top_content_box {
+  flex: 2;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#main_top_content_box div,
+#main_bottom_content_box div {
+  width: 50%;
+}
+
+#main_text_box {
+  font-size: 2.5rem;
+  line-height: 50px;
+  margin: 0 10px;
+}
+
+#main_scroll_box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  height: 90%;
+  border-radius: 10px;
+  box-shadow: 0 1px 6px #394f77;
+  margin: 0 10px;
+}
+
+#main_bottom_content_box {
+  flex: 5;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+#main_categori_box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  height: 90%;
+  border-radius: 10px;
+  box-shadow: 0 1px 6px #394f77;
+  margin: 0 10px;
+
+}
+
+#main_categori_box ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+  padding-left: 30px;
+}
+
+#main_categori_box ul li {
+  flex-basis: 25%;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40%;
+}
+
+#main_login_box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  height: 90%;
+  border-radius: 10px;
+  box-shadow: 0 1px 6px #394f77;
+  margin: 0 10px;
 }
 
