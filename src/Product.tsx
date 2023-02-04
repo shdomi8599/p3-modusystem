@@ -1,23 +1,41 @@
-import React from "react"
+import React, { useState } from "react"
 import ProductContent from "./ProductContent"
-import { type product } from "./Data/productData"
+import ContentDetail from "./ContentDetail"
+import { product } from "./Data/productData"
 
-const Product = ({ detail }: { detail: product }) => {
+const Product = ({ product, list }: { product: product, list: string }) => {
+
+    const [isDetail, setIsDetail] = useState(false);
+
+    const isDetailHandeler = (boolean: boolean) => {
+        setIsDetail(boolean)
+    }
+
+    const [detailData, setDetailData] = useState({})
+
+    const pushDetailData = (data: {}) => {
+        setDetailData(data)
+    }
+
     return <>
-        <div className="w0_5b"></div>
+        {isDetail && <ContentDetail isDetailHandeler={isDetailHandeler} detailData={detailData} />}
         <div className="product">
             <div className="product_img_box">
                 <img id="product_img" src={"../images/차단기원형바.jpg"} />
             </div>
             <div className="product_contents_box">
                 <div id="product_contents_top">
-                    <span>{detail.id}</span>
+                    <span>{product.id}</span>
                 </div>
                 <div id="product_contents_bottom">
-                    {detail.outline !== undefined && <ProductContent name={"개요"} />}
-                    {detail.characteristic !== undefined && <ProductContent name={"특징"} />}
-                    {detail.specification !== undefined && <ProductContent name={"사양"} />}
-                    {detail.optional !== undefined && <ProductContent name={"선택사양"} />}
+                    {product.outline !== undefined &&
+                        <ProductContent name={"개요"} isDetailHandeler={isDetailHandeler} product={product} pushDetailData={pushDetailData} />}
+                    {product.characteristic !== undefined &&
+                        <ProductContent name={"특징"} isDetailHandeler={isDetailHandeler} product={product} pushDetailData={pushDetailData} />}
+                    {product.specification !== undefined &&
+                        <ProductContent name={"사양"} isDetailHandeler={isDetailHandeler} product={product} pushDetailData={pushDetailData} />}
+                    {product.optional !== undefined &&
+                        <ProductContent name={"선택사양"} isDetailHandeler={isDetailHandeler} product={product} pushDetailData={pushDetailData} />}
                 </div>
             </div>
         </div>

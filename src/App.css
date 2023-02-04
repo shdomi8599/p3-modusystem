@@ -12,18 +12,23 @@
   font-family: 'NEXON Lv2 Gothic';
 }
 
+body {
+  
+}
+
 /* Header */
 
 header {
   background-color: #388FE4;
   position: fixed;
   width: 100%;
+  z-index: 4;
 }
 
 nav {
   margin: 0 15vw;
   color: white;
-
+  font-weight: 400;
 }
 
 #nav_header {
@@ -59,7 +64,6 @@ nav {
   align-items: center;
   list-style: none;
   text-align: center;
-
 }
 
 #nav_ul:after {
@@ -91,7 +95,6 @@ nav {
   flex-direction: column;
   position: relative;
   float: left;
-
 }
 
 .nav_li a {
@@ -146,14 +149,8 @@ nav {
   border-bottom: 1px solid white;
 }
 
-.w0_5b {
-  transform: scaleY(0.3);
-  border-top: 1px solid #388FE4;
-  width: 80%;
-}
 
 /* Main */
-
 #main {
   background-color: #388FE4;
   display: flex;
@@ -295,16 +292,30 @@ footer {
 
 /* ProductList */
 
-#productList {
+.productList {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+
 }
 
-
 /* Product */
+
+#line_box {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.w0_5b {
+  transform: scaleY(0.3);
+  border-top: 1px solid #388FE4;
+  width: 80%;
+  height: 100%;
+}
 
 .product {
   height: 55vh;
@@ -312,6 +323,62 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  min-width: 1652px;
+}
+
+#RF카드,
+#주차권발행,
+#요금계산기,
+#신호관제 {
+  flex-direction: row;
+  justify-content: flex-start;
+  overflow-x: hidden;
+}
+
+#RF카드 .product,
+#주차권발행 .product,
+#요금계산기 .product,
+#신호관제 .product {
+  min-width: 1780px;
+  padding-left: 130px;
+
+}
+
+#RF카드 #detail_page,
+#주차권발행 #detail_page,
+#요금계산기 #detail_page,
+#신호관제 #detail_page {
+  left: 590px;
+  top: -188px;
+}
+
+#left_arrow {
+  position: relative;
+  top: 250px;
+  right: 40px;
+}
+
+#right_arrow {
+  position: relative;
+  top: 250px;
+  right: -1530px;
+}
+
+#left_arrow img,
+#right_arrow img {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+#left_arrow img:active {
+  position: relative;
+  right: 0.3vh
+}
+
+#right_arrow img:active {
+  position: relative;
+  left: 0.3vh
 }
 
 .product_img_box {
@@ -367,7 +434,7 @@ footer {
 }
 
 .product_contents_bottom_contents {
-
+  font-weight: 900;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -378,4 +445,90 @@ footer {
   cursor: pointer;
   box-shadow: 0 0px 3px 1.5px #388FE4;
   width: 18%;
+  font-weight: 600;
+}
+
+.product_contents_bottom_contents:hover {
+  background-color: #388FE4;
+  color: white;
+}
+
+#content_detail {
+  position: relative;
+}
+
+#detail_X_box {
+  position: absolute;
+  right: 30px;
+  top: 30px;
+}
+
+#detail_X_box img {
+  width: 30px;
+  cursor: pointer;
+}
+
+#detail_page {
+  position: absolute;
+  top: 72px;
+  right: -400px;
+  background-color: white;
+  height: 40vh;
+  width: 40vw;
+  z-index: 1;
+  border-radius: 20px;
+  box-shadow: 0 1px 6px #394f77;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 30px;
+}
+
+.detail_product_name {
+  width: 100%;
+  height: 20%;
+}
+
+.detail_product_name span {
+  font-size: 2rem;
+  padding: 10px;
+  border-radius: 15px;
+  color: black;
+  font-weight: bold;
+}
+
+.detail_name {
+  width: 100%;
+  height: 20%;
+}
+
+.detail_name span {
+  box-shadow: 0 1px 6px #394f77;
+  display: inline-block;
+  width: 100%;
+  padding: 10px;
+  padding-left: 30px;
+  background-color: #677b8f;
+  color: white;
+  font-size: 1.4rem;
+  border-radius: 5px;
+}
+
+.detail_content {
+  width: 100%;
+  height: 60%;
+  background-color: #afb6b63b;
+  box-shadow: 0 1px 6px #394f77;
+  padding: 15px;
+  color: black;
+  border-radius: 10px;
+  font-size: 1rem;
+  color: #666d74;
+  overflow-y: auto;
+}
+
+.detail_content ul {
+  padding: 0px 20px;
+  line-height: 25px;
 }
