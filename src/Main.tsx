@@ -6,8 +6,12 @@ const Main = () => {
 
     return <section id="main">
         <div id="main_top_content_box">
-            <div id="main_text_box">모두시스템에선<p /> 이런 작업을 해요</div>
-            <div id="main_scroll_box">박스</div>
+            <div id="main_text_box">
+                맡겨주세요<p />모두시스템에게
+            </div>
+            <div id="main_scroll_box">
+                박스
+            </div>
         </div>
         <div id="main_bottom_content_box">
             <div id="main_categori_box">
@@ -15,7 +19,9 @@ const Main = () => {
                     {imgList.map((x, i) => <Categori key={x} id={i} />)}
                 </ul>
             </div>
-            <div id="main_login_box">로그인 박스</div>
+            <div id="main_login_box">
+                로그인 박스
+            </div>
         </div>
     </section>
 }
