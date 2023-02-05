@@ -13,7 +13,9 @@ function App() {
     <BrowserRouter>
       <Header />
       <Main />
+      <div id="productList_section">
       {productList.map((productList, i) => <ProductList key={i} productList={productList} />)}
+      </div>
       <Footer />
     </BrowserRouter>
   );

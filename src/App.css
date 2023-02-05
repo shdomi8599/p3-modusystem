@@ -12,9 +12,7 @@
   font-family: 'NEXON Lv2 Gothic';
 }
 
-body {
-  
-}
+body {}
 
 /* Header */
 
@@ -85,6 +83,23 @@ nav {
   color: white;
 }
 
+#nav_triangle_box {
+  position: relative;
+}
+
+#nav_triangle {
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  top: 33px;
+  left: -15px;
+}
+
+#nav_triangle img {
+  width: 30px;
+  height: 20px;
+}
+
 .nav_li {
   flex: 1;
   height: 10vh;
@@ -109,7 +124,6 @@ nav {
 
 .nav_li:hover ul {
   display: block;
-
 }
 
 .nav_li ul {
@@ -119,7 +133,7 @@ nav {
   left: 0;
   right: 0;
   text-align: center;
-  background-color: #2261a0;
+  background-color: #434C6D;
   border-radius: 8px;
   z-index: 2;
 }
@@ -139,7 +153,7 @@ nav {
   list-style: none;
 }
 
-#nav_last_a {
+.nav_li ul li:last-child a {
   box-shadow: none;
 }
 
@@ -148,7 +162,6 @@ nav {
   transform: scaleY(0.3);
   border-bottom: 1px solid white;
 }
-
 
 /* Main */
 #main {
@@ -236,6 +249,7 @@ nav {
   align-items: center;
   height: 40%;
   cursor: pointer;
+
 }
 
 #main_categori_box ul li:hover {
@@ -253,6 +267,7 @@ nav {
   border-radius: 10px;
   box-shadow: 0 1px 6px #394f77;
   margin: 0 10px;
+
 }
 
 .main_categori_img {
@@ -278,7 +293,6 @@ footer {
 
 #footer_content {
   flex: 3;
-
 }
 
 #footer_content div {
@@ -293,12 +307,19 @@ footer {
 /* ProductList */
 
 .productList {
-  width: 100%;
+  width: 99vw;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   flex-direction: column;
 
+}
+
+#productList_box {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
 }
 
 /* Product */
@@ -308,6 +329,8 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  width: 100%;
 }
 
 .w0_5b {
@@ -319,9 +342,9 @@ footer {
 
 .product {
   height: 55vh;
-  width: 80%;
+  width: 100vh;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   min-width: 1652px;
 }
@@ -333,35 +356,31 @@ footer {
   flex-direction: row;
   justify-content: flex-start;
   overflow-x: hidden;
+  width: 1652px;
 }
 
-#RF카드 .product,
-#주차권발행 .product,
-#요금계산기 .product,
-#신호관제 .product {
-  min-width: 1780px;
-  padding-left: 130px;
-
+#RF카드 {
+  width: 1652px;
 }
 
 #RF카드 #detail_page,
 #주차권발행 #detail_page,
 #요금계산기 #detail_page,
 #신호관제 #detail_page {
-  left: 590px;
+  left: 523px;
   top: -188px;
 }
 
 #left_arrow {
   position: relative;
   top: 250px;
-  right: 40px;
+  right: 30px;
 }
 
 #right_arrow {
   position: relative;
   top: 250px;
-  right: -1530px;
+  right: -1545px;
 }
 
 #left_arrow img,
@@ -468,10 +487,14 @@ footer {
   cursor: pointer;
 }
 
+#detail_box {
+  position: relative;
+}
+
 #detail_page {
   position: absolute;
-  top: 72px;
-  right: -400px;
+  top: 100px;
+  left: -300px;
   background-color: white;
   height: 40vh;
   width: 40vw;

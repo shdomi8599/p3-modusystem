@@ -1,20 +1,18 @@
 import React from "react";
+import { detailData } from "./Data/type";
+
 
 const ContentDetail = ({ isDetailHandeler, detailData }:
-    { isDetailHandeler: (boolean: boolean) => void; detailData: any }) => {
+    { isDetailHandeler: (boolean: boolean) => void; detailData: detailData }) => {
 
-    type detailData = {
-        id: string;
-        name: string;
-        content: string | string[]
-    }
+
     const { id, name, content } = detailData
 
     const closeEvent = () => {
         isDetailHandeler(false)
     }
 
-    return <div id="content_detail">
+    return <div id="detail_box">
         <div id="detail_page">
             <div id="detail_X_box">
                 <img onClick={closeEvent} src={"../images/free-icon-x-657059.png"} />

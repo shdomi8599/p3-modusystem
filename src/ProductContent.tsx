@@ -1,8 +1,8 @@
 import React from "react";
-import { product } from "./Data/productData";
+import { detailData, product } from "./Data/type";
 
 const ProductContent = ({ name, product, isDetailHandeler, pushDetailData }:
-    { name: string; product: product; isDetailHandeler: (boolean: boolean) => void; pushDetailData: (data: {}) => void; }) => {
+    { name: string; product: product; isDetailHandeler: (boolean: boolean) => void; pushDetailData: (data: detailData) => void; }) => {
 
     const productList: {
         [index: string]: string | string[] | undefined
