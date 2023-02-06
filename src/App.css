@@ -555,3 +555,28 @@ footer {
   padding: 0px 20px;
   line-height: 25px;
 }
+
+/* TopBtn */
+
+#top_btn_box {
+  position: relative;
+  
+}
+
+#top_btn {
+  width: 60px;
+  height: 60px;
+  position: fixed;
+  left: 1820px;
+  bottom: 60px;
+  cursor: pointer;
+  
+}
+
+#top_btn:active {
+  bottom: 63px;
+}
+
+.hide {
+  display: none;
+}

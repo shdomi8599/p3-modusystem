@@ -12,6 +12,10 @@ const Header = () => {
         { 온라인견적: ["견적의뢰"] }
     ]
 
+    const moveTop = ()=>{
+        window.scrollTo({ left: 0, top: 0, behavior: "smooth" });
+    }
+
     return <header>
         <div id='nav_header' >
             <div id='nav_header_content'>
@@ -25,7 +29,7 @@ const Header = () => {
         <nav>
             <ul id='nav_ul'>
                 <li className='nav_li' id="nav_title">
-                    <img id="modu_logo" src={"../images/MODOO1.png"} />
+                    <img onClick={moveTop} id="modu_logo" src={"../images/MODOO1.png"} />
                 </li>
                 {navLiList.map((x, i) => <NavLi categori={x} key={i} />)}
             </ul>
