@@ -1,10 +1,15 @@
 import React from "react";
+type propsData = {
+    name: string, categori: {};
+    id: number, offEventHandelr: () => void
+}
 
-const NavLiSmall = ({ name, categori, id }: { name: string, categori: {}, id: number }) => {
+const NavLiSmall = ({ name, categori, id, offEventHandelr }: propsData) => {
 
     const scrollCategoriList = [597, 1114, 1683, 2252, 2769, 3338, 3855, 4424]
 
     const moveCategoriEvent = () => {
+        offEventHandelr()
         window.scrollTo({ left: 0, top: scrollCategoriList[id] - 50, behavior: "smooth" });
     }
 
@@ -13,6 +18,7 @@ const NavLiSmall = ({ name, categori, id }: { name: string, categori: {}, id: nu
     const wrap_main = document.querySelector("#wrap_main")
 
     const introEvent = () => {
+        offEventHandelr()
         wrap_main && wrap_main.scrollTo({ left: scrollIntroList[id], top: 0, behavior: "smooth" });
         window.scrollTo({ left: 0, top: 0, behavior: "smooth" });
     }

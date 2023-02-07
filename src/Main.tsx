@@ -5,10 +5,10 @@ import MainDirections from "./MainDirections"
 import MainGreetings from "./MainGreetings"
 import MainOrganization from "./MainOrganization"
 
-const Main = () => {
+const Main = ({offEventHandelr}:{offEventHandelr:()=>void;}) => {
 
     return <section id="wrap_main">
-        <MainCategori />
+        <MainCategori offEventHandelr={offEventHandelr}/>
         <MainGreetings />
         <MainOrganization />
         <MainDirections />

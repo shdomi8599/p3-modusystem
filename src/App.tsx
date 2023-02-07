@@ -2,22 +2,24 @@ import React, { useState } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import './App.css';
 import Footer from './Footer';
-import Greetings from './MainGreetings';
 import Header from './Header';
 import Main from './Main';
 import ProductListSection from './ProductListSection';
 import TopBtn from './TopBtn';
 
-
-
 function App() {
 
+  const [offEvent, setOffEvent] = useState(true)
+
+  const offEventHandelr = () => {
+    setOffEvent(!offEvent)
+  }
   return (
     <BrowserRouter>
-      <Header />
-      <Main />
-      <TopBtn />
-      <ProductListSection />
+      <Header offEventHandelr={offEventHandelr} />
+      <Main offEventHandelr={offEventHandelr} />
+      <TopBtn offEventHandelr={offEventHandelr} />
+      <ProductListSection offEvent={offEvent} />
       <Footer />
     </BrowserRouter>
   );

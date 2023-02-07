@@ -164,7 +164,7 @@ nav {
 }
 
 /* Main */
-#wrap_main{
+#wrap_main {
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -286,6 +286,11 @@ nav {
   border-radius: 5px;
 }
 
+
+html {
+  scroll-behavior: smooth;
+}
+
 /* MainGreetings */
 
 #main_section {
@@ -325,7 +330,7 @@ nav {
 
 
 
-#greetings_box{
+#greetings_box {
   width: 50vw;
   height: 50vh;
   background-color: #fff;
@@ -368,8 +373,8 @@ nav {
 
 /* kakao Map */
 
-#map{
-  margin-bottom:30px;
+#map {
+  margin-bottom: 30px;
 }
 
 /* Footer */

@@ -1,8 +1,13 @@
 import React from "react";
 import { detailData, product } from "./Data/type";
+type propsData = {
+    name: string;
+    product: product;
+    isDetailHandeler: (boolean: boolean) => void;
+    pushDetailData: (data: detailData) => void;
+}
 
-const ProductContent = ({ name, product, isDetailHandeler, pushDetailData }:
-    { name: string; product: product; isDetailHandeler: (boolean: boolean) => void; pushDetailData: (data: detailData) => void; }) => {
+const ProductContent = ({ name, product, isDetailHandeler, pushDetailData }: propsData) => {
 
     const productList: {
         [index: string]: string | string[] | undefined

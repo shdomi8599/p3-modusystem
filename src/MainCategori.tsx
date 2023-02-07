@@ -1,7 +1,7 @@
 import React from "react";
 import Categori from "./Categori"
 
-const MainCategori = () =>{
+const MainCategori = ({offEventHandelr}:{offEventHandelr:()=>void;}) =>{
     const imgList: number[] = Array(8).fill(1).map((x, i) => x + i)
     return <section id="main">
     <div id="main_top_content_box">
@@ -15,7 +15,7 @@ const MainCategori = () =>{
     <div id="main_bottom_content_box">
         <div id="main_categori_box">
             <ul>
-                {imgList.map((x, i) => <Categori key={x} id={i} />)}
+                {imgList.map((x, i) => <Categori key={x} id={i} offEventHandelr={offEventHandelr}/>)}
             </ul>
         </div>
         <div id="main_login_box">

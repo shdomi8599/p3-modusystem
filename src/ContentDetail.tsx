@@ -1,10 +1,10 @@
 import React from "react";
 import { detailData } from "./Data/type";
-
-
-const ContentDetail = ({ isDetailHandeler, detailData }:
-    { isDetailHandeler: (boolean: boolean) => void; detailData: detailData }) => {
-
+type propsData = {
+    isDetailHandeler: (boolean: boolean) => void;
+    detailData: detailData
+}
+const ContentDetail = ({ isDetailHandeler, detailData }: propsData) => {
 
     const { id, name, content } = detailData
 

@@ -1,10 +1,9 @@
 import React, { useEffect, useRef, useState } from "react";
 
-const TopBtn = () => {
-
-
+const TopBtn = ({ offEventHandelr }: { offEventHandelr: () => void }) => {
 
     const moveTop = () => {
+        offEventHandelr()
         window.scrollTo({ left: 0, top: 0, behavior: "smooth" });
     }
 
@@ -13,6 +12,7 @@ const TopBtn = () => {
     window.addEventListener('scroll', () => { scrollEvent() });
 
     const scrollEvent = () => {
+        // offEventHandelr()
         setScrollY(window.scrollY)
     }
 
