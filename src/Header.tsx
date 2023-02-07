@@ -12,7 +12,10 @@ const Header = () => {
         { 온라인견적: ["견적의뢰"] }
     ]
 
-    const moveTop = ()=>{
+    const wrap_main = document.querySelector("#wrap_main")!
+
+    const moveTop = () => {
+        wrap_main.scrollTo({ left: 0, top: 0, behavior: "smooth" });
         window.scrollTo({ left: 0, top: 0, behavior: "smooth" });
     }
 

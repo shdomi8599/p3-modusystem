@@ -4,29 +4,33 @@ import ContentDetail from "./ContentDetail"
 import { product } from "./Data/type"
 import { detailData } from "./Data/type"
 
-const Product = ({ product, list }: { product: product, list: string }) => {
+const Product = ({ product, isDetailHandeler, isDetail }: { product: product, isDetailHandeler: (boolean: boolean) => void; isDetail: boolean }) => {
 
-    const [isDetail, setIsDetail] = useState(false);
-
-    const isDetailHandeler = (boolean: boolean) => {
-        setIsDetail(boolean)
-    }
-
+    //버튼을 누르면 해당 데이터가 저장되는 state
     let [detailData, setDetailData] = useState<detailData>()
 
     const pushDetailData = (data: detailData) => {
         setDetailData(data)
     }
 
+    let imgBoxClass = "product_img_box";
+    let contentsBoxClass = "product_contents_box";
+
+    if(typeof product.img === 'object'){
+        imgBoxClass = "product_img_box_booth";
+        contentsBoxClass ="product_contents_box_booth"
+    }
+    
     return <>
         {detailData !== undefined && isDetail && <ContentDetail isDetailHandeler={isDetailHandeler} detailData={detailData} />}
         <div className="product">
-            <div className="product_img_box">
-                <img id="product_img" src={"../images/차단기원형바.jpg"} />
+            <div className={imgBoxClass}>
+               {typeof product.img === "string" &&<img id="product_img" src={product.img} />}
+               {typeof product.img === 'object'&& product.img.map(src=> <img id="product_img" src={`../images/주차부스/${src}`} key={src}/>)}
             </div>
-            <div className="product_contents_box">
+            <div className={contentsBoxClass}>
                 <div id="product_contents_top">
-                    <span>{product.id}</span>
+                {typeof product.img === 'object'? <span id="booth_id">{product.id}</span>:<span>{product.id}</span>}   
                 </div>
                 <div id="product_contents_bottom">
                     {product.outline !== undefined &&

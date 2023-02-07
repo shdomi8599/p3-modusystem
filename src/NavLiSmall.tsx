@@ -1,16 +1,27 @@
 import React from "react";
 
-const NavLiSmall = ({name,categori,id}:{name:string,categori:{},id:number})=>{
+const NavLiSmall = ({ name, categori, id }: { name: string, categori: {}, id: number }) => {
 
-    const scrollList = [597, 1114, 1683, 2252, 2769, 3338, 3855, 4424]
+    const scrollCategoriList = [597, 1114, 1683, 2252, 2769, 3338, 3855, 4424]
 
-    const moveEvent = () => {
-        window.scrollTo({ left: 0, top: scrollList[id] - 50, behavior: "smooth" });
+    const moveCategoriEvent = () => {
+        window.scrollTo({ left: 0, top: scrollCategoriList[id] - 50, behavior: "smooth" });
     }
 
-    return<li>
-    {Object.keys(categori)[0] === "제품소개" ? <a onClick={moveEvent}>{name}</a> : <a>{name}</a>}
-</li>
+    const scrollIntroList = [1940, 3880, 6000]
+
+    const wrap_main = document.querySelector("#wrap_main")
+
+    const introEvent = () => {
+        wrap_main && wrap_main.scrollTo({ left: scrollIntroList[id], top: 0, behavior: "smooth" });
+        window.scrollTo({ left: 0, top: 0, behavior: "smooth" });
+    }
+
+    return <li>
+        {Object.keys(categori)[0] === "제품소개" ? <a onClick={moveCategoriEvent}>{name}</a>
+            :
+            Object.keys(categori)[0] === "회사소개" ? <a onClick={introEvent}>{name}</a> : <a>{name}</a>}
+    </li>
 }
 
 export default NavLiSmall;

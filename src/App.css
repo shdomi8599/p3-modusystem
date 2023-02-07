@@ -164,6 +164,15 @@ nav {
 }
 
 /* Main */
+#wrap_main{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  width: 99vw;
+  overflow-x: hidden;
+}
+
 #main {
   background-color: #388FE4;
   display: flex;
@@ -174,6 +183,7 @@ nav {
   color: white;
   padding: 10vh 0;
   padding-top: 18vh;
+  min-width: 100vw;
 }
 
 #main_top_content_box {
@@ -276,6 +286,92 @@ nav {
   border-radius: 5px;
 }
 
+/* MainGreetings */
+
+#main_section {
+  background-color: #388FE4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 85vh;
+  color: white;
+  padding: 10vh 0;
+  padding-top: 18vh;
+  min-width: 100vw;
+}
+
+#main_section_box {
+  width: 50vw;
+  height: 50vh;
+  background-color: #fff;
+  border-radius: 20px;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 30px;
+  font-size: 1.26rem;
+  line-height: 37px;
+  font-weight: bold;
+  margin-left: 30px;
+}
+
+#impact_message {
+  background-color: #c8dff8;
+  border-radius: 5px;
+  padding: 3px;
+}
+
+
+
+#greetings_box{
+  width: 50vw;
+  height: 50vh;
+  background-color: #fff;
+  border-radius: 20px;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 30px;
+  font-size: 1.26rem;
+  line-height: 37px;
+  font-weight: bold;
+  margin-left: 30px;
+}
+
+#greetings_box div {
+  width: 100%;
+}
+
+#greetings_box div:last-child {
+  padding-left: 100px;
+  text-align: right;
+}
+
+#greeting_logo_box {
+  position: relative;
+  margin-top: 0px;
+}
+
+.greetings_logo {
+  position: absolute;
+  width: 150px;
+  height: 35px;
+}
+
+#greetings_bottom_logo {
+  right: 5px;
+}
+
+/* kakao Map */
+
+#map{
+  margin-bottom:30px;
+}
+
 /* Footer */
 
 footer {
@@ -374,7 +470,7 @@ footer {
 #left_arrow {
   position: relative;
   top: 250px;
-  right: 30px;
+  right: 0px;
 }
 
 #right_arrow {
@@ -408,6 +504,51 @@ footer {
   justify-content: center;
   align-items: center;
   padding: 90px 0px;
+  padding-left: 150px;
+}
+
+.product_contents_box_booth {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+}
+
+#booth_id {
+  position: absolute;
+  top: -200px;
+  left: 0px;
+  height: 300px;
+  width: 100%;
+}
+
+/* 스크롤바 스타일 참고 링크 https://gurtn.tistory.com/120 */
+
+.product_img_box_booth::-webkit-scrollbar {
+  height: 30px;
+  /* 스크롤바의 너비 */
+}
+
+.product_img_box_booth::-webkit-scrollbar-thumb {
+  background: #388FE4;
+  border-radius: 10px;
+}
+
+.product_img_box_booth::-webkit-scrollbar-track {
+  background: rgba(33, 122, 244, .1);
+  /*스크롤바 뒷 배경 색상*/
+}
+
+
+.product_img_box_booth {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 70%;
+  padding-top: 100px;
+  overflow-x: auto;
+  padding-bottom: 30px;
 }
 
 .product_contents_box {
@@ -560,23 +701,25 @@ footer {
 
 #top_btn_box {
   position: relative;
-  
 }
 
+
+/* 진동효과 참고 링크 https://gurtn.tistory.com/170 */
 #top_btn {
   width: 60px;
   height: 60px;
   position: fixed;
   left: 1820px;
-  bottom: 60px;
   cursor: pointer;
-  
+  animation: moveTop 1s infinite;
 }
 
-#top_btn:active {
-  bottom: 63px;
-}
+@keyframes moveTop {
+  0% {
+    top: 800px;
+  }
 
-.hide {
-  display: none;
+  100% {
+    top: 780px;
+  }
 }
