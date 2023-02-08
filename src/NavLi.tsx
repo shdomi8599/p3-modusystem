@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { navLi } from "./Data/type";
 import NavLiSmall from "./NavLiSmall";
 
-const NavLi = ({ categori,offEventHandelr }: { categori: navLi, offEventHandelr:()=>void; }) => {
+const NavLi = ({ categori, offEventHandelr }: { categori: navLi, offEventHandelr: () => void; }) => {
 
     const liList = categori[Object.keys(categori)[0]]
 
@@ -24,7 +24,7 @@ const NavLi = ({ categori,offEventHandelr }: { categori: navLi, offEventHandelr:
         </>}
         <a>{Object.keys(categori)}</a>
         <ul onMouseOut={downHandler}>
-            {liList.map((x: string, i: number) => <NavLiSmall name={x} key={i} categori={categori} id={liList.indexOf(x)} offEventHandelr={offEventHandelr}/>)}
+            {liList.map((x: string, i: number) => <NavLiSmall name={x} key={i} categori={categori} id={liList.indexOf(x)} offEventHandelr={offEventHandelr} />)}
         </ul>
     </li>
 }

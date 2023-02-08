@@ -25,9 +25,10 @@ const Product = ({ product, isDetailHandeler, isDetail }: propsData) => {
         contentsBoxClass = "product_contents_box_booth"
     }
 
+
     return <>
         {detailData !== undefined && isDetail && <ContentDetail isDetailHandeler={isDetailHandeler} detailData={detailData} />}
-        <div className="product">
+        <div className="product" >
             <div className={imgBoxClass}>
                 {typeof product.img === "string" && <img id="product_img" src={product.img} />}
                 {typeof product.img === 'object' && product.img.map(src => <img id="product_img" src={`../images/주차부스/${src}`} key={src} />)}

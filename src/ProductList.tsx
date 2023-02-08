@@ -53,7 +53,7 @@ const ProductList = ({ productList, offEvent }: propsData) => {
         target.current?.scrollLeft !== 0 && detailOff().then(leftEvent)
     }
 
-    return <div id="productList_box">
+    return <div id="productList_box" >
         <div id="line_box">
             {list === "차량차단기" || list === "리모콘" || list === "차량번호인식" || list === "주차부스" ||
                 <>

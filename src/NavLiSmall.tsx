@@ -6,6 +6,7 @@ type propsData = {
 
 const NavLiSmall = ({ name, categori, id, offEventHandelr }: propsData) => {
 
+    //target들에게서 추출한 높이
     const scrollCategoriList = [597, 1114, 1683, 2252, 2769, 3338, 3855, 4424]
 
     const moveCategoriEvent = () => {

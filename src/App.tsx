@@ -6,6 +6,7 @@ import Header from './Header';
 import Main from './Main';
 import ProductListSection from './ProductListSection';
 import TopBtn from './TopBtn';
+import Form from './MailForm';
 
 function App() {
 

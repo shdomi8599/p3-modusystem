@@ -14,7 +14,7 @@ const Footer = () => {
                 <span>팩스번호 : 02-401-0046</span>
             </div>
             <div>
-            <span>COPYRIGHT© 2007 모두시스템 ALL RIGHTS RESERVED.</span>
+                <span>COPYRIGHT© 2007 모두시스템 ALL RIGHTS RESERVED.</span>
             </div>
         </div>
     </footer>

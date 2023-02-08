@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { navLiList } from './Data/type';
 import NavLi from './NavLi';
 
-const Header = ({offEventHandelr}:{offEventHandelr:()=>void;}) => {
+const Header = ({ offEventHandelr }: { offEventHandelr: () => void; }) => {
 
     const navLiList: navLiList = [
         { 회사소개: ["인사말", "조직도", "찾아오시는길"] },
@@ -14,6 +14,7 @@ const Header = ({offEventHandelr}:{offEventHandelr:()=>void;}) => {
 
     //wrap_main값을 null로 인식할때가 있어서 useEffect를 통해 한번더 체크 
     let wrap_main = document.querySelector("#wrap_main")
+
     useEffect(() => {
         wrap_main = document.querySelector("#wrap_main")
     }, [])
@@ -39,7 +40,7 @@ const Header = ({offEventHandelr}:{offEventHandelr:()=>void;}) => {
                 <li className='nav_li' id="nav_title">
                     <img onClick={moveTop} id="modu_logo" src={"../images/MODOO1.png"} />
                 </li>
-                {navLiList.map((x, i) => <NavLi categori={x} key={i} offEventHandelr={offEventHandelr}/>)}
+                {navLiList.map((x, i) => <NavLi categori={x} key={i} offEventHandelr={offEventHandelr} />)}
             </ul>
         </nav>
         <div className='w0_5'></div>

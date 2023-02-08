@@ -4,7 +4,7 @@ export interface product {
     specification?: string[];
     characteristic?: string[];
     optional?: string[];
-    img?: string | string[] ;
+    img?: string | string[];
 }
 
 export type allProduct =
