@@ -1,5 +1,5 @@
 import React from "react"
-import { productList } from "./Data/productData"
+import { productList } from "../Data/productData"
 import ProductList from "./ProductList";
 
 const ProductListSection = ({ offEvent }: { offEvent: boolean }) => {

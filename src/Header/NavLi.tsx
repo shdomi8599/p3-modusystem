@@ -1,11 +1,12 @@
 import React, { useState } from "react";
-import { navLi } from "./Data/type";
+import { navLi } from "../Data/type";
 import NavLiSmall from "./NavLiSmall";
 
 const NavLi = ({ categori, offEventHandelr }: { categori: navLi, offEventHandelr: () => void; }) => {
 
     const liList = categori[Object.keys(categori)[0]]
 
+    //카테고리에 삼각형이 표시되거나 사라지도록 도와주는 함수
     const [triangle, setTriangle] = useState(false)
     const overHandler = () => {
         setTriangle(true)

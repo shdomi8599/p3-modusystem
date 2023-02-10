@@ -1,5 +1,5 @@
 import React from "react";
-import { detailData } from "./Data/type";
+import { detailData } from "../Data/type";
 type propsData = {
     isDetailHandeler: (boolean: boolean) => void;
     detailData: detailData
@@ -7,7 +7,7 @@ type propsData = {
 const ContentDetail = ({ isDetailHandeler, detailData }: propsData) => {
 
     const { id, name, content } = detailData
-
+    //제품 상세페이지를 닫아주는 함수
     const closeEvent = () => {
         isDetailHandeler(false)
     }

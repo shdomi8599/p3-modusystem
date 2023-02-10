@@ -1,8 +1,8 @@
 import React from "react"
-import MainCategori from "./MainCategori"
-import MainDirections from "./MainDirections"
-import MainGreetings from "./MainGreetings"
-import MainOrganization from "./MainOrganization"
+import MainCategori from "./Categori/MainCategori"
+import MainDirections from "./MainDirections/MainDirections"
+import MainGreetings from "./MainGreetings/MainGreetings"
+import MainOrganization from "./MainOrganization/MainOrganization"
 
 const Main = ({ offEventHandelr }: { offEventHandelr: () => void; }) => {
 

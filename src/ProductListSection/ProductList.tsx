@@ -1,19 +1,16 @@
 import React, { useEffect, useRef, useState } from "react"
 import Product from "./Product"
-import { product } from "./Data/type"
+import { product } from "../Data/type"
 type propsData = {
     productList: { [key: string]: product[] };
     offEvent: boolean;
 }
 
 const ProductList = ({ productList, offEvent }: propsData) => {
-
-    //네비바를 통해 이동해도 detail창이 꺼지도록 하기 위한 useEffect
-
-
     //디테일 페이지 state
     const [isDetail, setIsDetail] = useState(false);
 
+    //디테일 페이지의 상태를 변경하는 함수
     const isDetailHandeler = (boolean: boolean) => {
         setIsDetail(boolean)
     }
@@ -22,6 +19,7 @@ const ProductList = ({ productList, offEvent }: propsData) => {
     const product = productList[list];
     const target = useRef<HTMLDivElement>(null);
 
+    //off이벤트값이 변경되면 디테일 페이지가 사라지도록 도와주는 함수 
     useEffect(() => {
         setIsDetail(false);
     }, [offEvent])

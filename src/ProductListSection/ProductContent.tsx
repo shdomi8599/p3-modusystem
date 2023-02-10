@@ -1,5 +1,5 @@
 import React from "react";
-import { detailData, product } from "./Data/type";
+import { detailData, product, productList } from "../Data/type";
 type propsData = {
     name: string;
     product: product;
@@ -9,9 +9,7 @@ type propsData = {
 
 const ProductContent = ({ name, product, isDetailHandeler, pushDetailData }: propsData) => {
 
-    const productList: {
-        [index: string]: string | string[] | undefined
-    } =
+    const productList: productList =
     {
         "개요": product.outline,
         "특징": product.characteristic,
@@ -25,6 +23,7 @@ const ProductContent = ({ name, product, isDetailHandeler, pushDetailData }: pro
         content: productList[name]
     }
 
+    //데이터가 저장되고 디테일 페이지가 off되도록 도와주는 함수
     const btnEvent = () => {
         pushDetailData(data)
         isDetailHandeler(true)

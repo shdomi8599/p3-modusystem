@@ -28,3 +28,7 @@ export type navLiList = [
     navLi,
     navLi
 ]
+
+export type productList = {
+    [index: string]: string | string[] | undefined
+}

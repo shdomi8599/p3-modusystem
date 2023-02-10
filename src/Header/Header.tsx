@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { navLiList } from './Data/type';
+import { navLiList } from '../Data/type';
 import NavLi from './NavLi';
 
 const Header = ({ offEventHandelr }: { offEventHandelr: () => void; }) => {
@@ -14,11 +14,11 @@ const Header = ({ offEventHandelr }: { offEventHandelr: () => void; }) => {
 
     //wrap_main값을 null로 인식할때가 있어서 useEffect를 통해 한번더 체크 
     let wrap_main = document.querySelector("#wrap_main")
-
     useEffect(() => {
         wrap_main = document.querySelector("#wrap_main")
     }, [])
 
+    //최상단 페이지로 이동하면서 메인지도 리셋시켜주는 함수
     const moveTop = () => {
         offEventHandelr()
         window.scrollTo({ left: 0, top: 0, behavior: "smooth" });

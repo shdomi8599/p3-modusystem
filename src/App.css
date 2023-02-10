@@ -167,7 +167,7 @@ nav {
   justify-content: flex-start;
   align-items: center;
   flex-direction: row;
-  width: 99vw;
+  width: 100%;
   overflow-x: hidden;
 }
 
@@ -361,6 +361,18 @@ input[type=text]:focus {
   border-color: rgb(255, 0, 0);
   box-shadow: 0 0 8px 0 dodgetBlue;
 }
+
+select {
+  width: 15%;
+  border: 2px solid #aaa;
+  border-radius: 4px;
+  margin: 4px 0;
+  outline: none;
+  padding: 4px;
+  box-sizing: border-box;
+  transition: .3s;
+}
+
 
 #mail_content_box {
   display: flex;
@@ -587,6 +599,17 @@ html {
 }
 
 /* kakao Map */
+
+.overlaybox {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #388FE4;
+  padding: 1px 10px;
+  border-radius: 10px;
+  color: white;
+  font-size: 10px;
+}
 
 #map {
   margin-bottom: 30px;
@@ -983,4 +1006,169 @@ footer {
   100% {
     left: 1450px;
   }
+}
+
+/* RequestBtnForm */
+
+#request_btn_form {
+  max-width: 900px;
+  height: 800px;
+  top: 50px;
+  position: absolute;
+  border: 1px solid black;
+  background-color: #ffffff;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  flex-direction: column;
+}
+
+#request_btn {
+  padding: 0;
+}
+
+label {
+  min-width: 50px;
+}
+
+#name_input,
+#tel_input {
+  max-width: 200px;
+}
+
+#adress_input {
+  min-width: 400px;
+}
+
+.privacy {
+  flex: 0.4;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 30px;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  padding-left: 30px;
+}
+
+.hope,
+.additional {
+  padding-left: 30px;
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.btn_form_box {
+  flex: 0.5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+select {
+  width: 15%;
+  border: 2px solid #aaa;
+  border-radius: 4px;
+  margin: 4px 0;
+  outline: none;
+  padding: 4px;
+  box-sizing: border-box;
+  transition: .3s;
+  margin-left: 10px;
+}
+
+select:hover {
+  border-color: rgb(255, 0, 0);
+  box-shadow: 0 0 8px 0 dodgetBlue;
+}
+
+#block_page {
+  left: 0;
+  width: 100vw;
+  height: 100vw;
+  z-index: 4;
+  position: absolute;
+  background-color: #394f77;
+  opacity: 0.5;
+}
+
+/* ExitPage */
+
+#exit_page {
+  max-width: 520px;
+  height: 50px;
+  left: 190px;
+  top: 177px;
+  position: absolute;
+  border: 1px solid black;
+  border-bottom: none;
+  background-color: white;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 30px;
+}
+
+#exit_box {
+  padding: 10px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+#exit_x {
+  width: 30px;
+  cursor: pointer;
+}
+
+button {
+  appearance: none;
+  background-color: transparent;
+  border: 0.125em solid #1A1A1A;
+  border-radius: 0.9375em;
+  box-sizing: border-box;
+  color: #3B3B3B;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+  min-height: 0;
+  min-width: 0;
+  outline: none;
+  padding: 5px 5px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  will-change: transform;
+}
+
+button:disabled {
+  pointer-events: none;
+}
+
+button:hover {
+  color: #fff;
+  background-color: #1A1A1A;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+button:active {
+  box-shadow: none;
+  transform: translateY(0);
 }

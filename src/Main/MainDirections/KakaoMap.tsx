@@ -21,16 +21,26 @@ const KakaoMap = () => {
         });
         // 지도에 마커를 표시합니다
         marker.setMap(map);
-        var content = '<div class ="label"><span class="left"></span><span class="center">모두시스템</span><span class="right"></span></div>';
+        var content = '<div class="overlaybox">' +
+            '    <div class="boxtitle">모두시스템</div>' +
+            '</div>';
         // 커스텀 오버레이가 표시될 위치입니다 
-        var position = new kakao.maps.LatLng(37.501425, 127.140322);
+        var position = new kakao.maps.LatLng(37.501695, 127.140242);
         // 커스텀 오버레이를 생성합니다
         var customOverlay = new kakao.maps.CustomOverlay({
             position: position,
-            content: content
+            content: content,
+            xAnchor: 0.3,
+            yAnchor: 0.91
         });
         // 커스텀 오버레이를 지도에 표시합니다
         customOverlay.setMap(map);
+        function setZoomable(zoomable: any) {
+            // 마우스 휠로 지도 확대,축소 가능여부를 설정합니다
+            map.setZoomable(zoomable);
+        }
+        setZoomable(0)
+
     }, [])
     return <div id="map" style={{ width: '900px', height: '350px' }}></div>
 }
