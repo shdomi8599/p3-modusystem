@@ -1,7 +1,7 @@
 import React from "react";
 type propsData = {
     name: string, categori: {};
-    id: number, offEventHandelr: () => void
+    id: number, offEventHandelr: () => void;
 }
 
 const NavLiSmall = ({ name, categori, id, offEventHandelr }: propsData) => {
@@ -14,10 +14,9 @@ const NavLiSmall = ({ name, categori, id, offEventHandelr }: propsData) => {
         window.scrollTo({ left: 0, top: scrollCategoriList[id] - 50, behavior: "smooth" });
     }
 
-    const scrollIntroList = [1940, 3880, 6000]
-    const wrap_main = document.querySelector("#wrap_main")
-
     //메인 페이지 스크롤을 도와주는 함수
+    const scrollIntroList = [1940, 3880, 6000]
+    const wrap_main = document.querySelector("#wrap_main")!
     const introEvent = () => {
         offEventHandelr()
         wrap_main && wrap_main.scrollTo({ left: scrollIntroList[id], top: 0, behavior: "smooth" });
@@ -25,9 +24,9 @@ const NavLiSmall = ({ name, categori, id, offEventHandelr }: propsData) => {
     }
 
     return <li>
-        {Object.keys(categori)[0] === "제품소개" ? <a onClick={moveCategoriEvent}>{name}</a>
+        {Object.keys(categori)[0] === "제품소개" ? <a href="#!" onClick={moveCategoriEvent}>{name}</a>
             :
-            Object.keys(categori)[0] === "회사소개" ? <a onClick={introEvent}>{name}</a> : <a>{name}</a>}
+            Object.keys(categori)[0] === "회사소개" ? <a href="#!" onClick={introEvent}>{name}</a> : <a href="#!">{name}</a>}
     </li>
 }
 

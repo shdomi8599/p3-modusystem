@@ -37,6 +37,10 @@ nav {
   cursor: pointer;
 }
 
+a {
+  text-decoration-line: none;
+}
+
 #nav_login {
   border: none;
   color: #388FE4;
@@ -128,12 +132,12 @@ nav {
   display: none;
   position: absolute;
   top: 70px;
-  left: 0;
-  right: 0;
+  left: -50;
   text-align: center;
   background-color: #434C6D;
   border-radius: 8px;
   z-index: 2;
+  width: 170px;
 }
 
 .nav_li ul a {
@@ -149,6 +153,7 @@ nav {
 
 .nav_li ul li {
   list-style: none;
+
 }
 
 .nav_li ul li:last-child a {
@@ -972,9 +977,10 @@ footer {
 .notification-container {
   background: rgba(0, 0, 0, .3);
   border-radius: 10px 10px 0 0;
-  padding: 15px 20px;
+  padding: 5px 10px;
   position: absolute;
   bottom: -50px;
+  z-index: 4;
   transition: transform 0.3s ease-in-out;
 }
 
@@ -989,8 +995,8 @@ footer {
   background: rgba(255, 0, 0, 0.8);
   border-radius: 10px;
   width: 350px;
-  height: 100px;
-  padding: 15px 20px;
+  height: 70px;
+  padding: 5px 10px;
   position: absolute;
   bottom: 340px;
   right: 70px;
@@ -1015,7 +1021,8 @@ footer {
   height: 800px;
   top: 50px;
   position: absolute;
-  border: 1px solid black;
+  border: 3px solid #aaa;
+  border-radius: 10px;
   background-color: #ffffff;
   z-index: 5;
   display: flex;
@@ -1039,7 +1046,12 @@ label {
 }
 
 #adress_input {
-  min-width: 400px;
+  min-width: 300px;
+  margin-right: 10px;
+}
+
+#adress_input2 {
+  margin-left: 50px;
 }
 
 .privacy {
@@ -1054,15 +1066,60 @@ label {
   padding-left: 30px;
 }
 
+#adress_input_box {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+
+#adress_input_box div:first-child {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
 .hope,
 .additional {
   padding-left: 30px;
   flex: 1;
   display: flex;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-start;
   width: 100%;
   height: 100%;
+  flex-direction: column;
+}
+
+.additional textarea {
+  margin-top: 10px;
+  min-height: 150px;
+  font-size: 1.2rem;
+  width: 87%;
+}
+
+.hope select {
+  width: 30%;
+}
+
+.hope div:last-child {
+  display: flex;
+  justify-content: flex-start;
+  border: 2px solid #aaa;
+  max-width: 750px;
+  height: 50%;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.product_icon {
+  display: inline;
+  height: 50%;
+  padding: 7px;
+  border-radius: 10px;
+  margin: 0px 5px;
+  font-weight: bold;
+  color: white;
 }
 
 .btn_form_box {
@@ -1074,8 +1131,12 @@ label {
   height: 100%;
 }
 
+#submit_btn {
+  font-size: 20px;
+  padding: 10px;
+}
+
 select {
-  width: 15%;
   border: 2px solid #aaa;
   border-radius: 4px;
   margin: 4px 0;
@@ -1107,7 +1168,7 @@ select:hover {
   max-width: 520px;
   height: 50px;
   left: 190px;
-  top: 177px;
+  top: 137px;
   position: absolute;
   border: 1px solid black;
   border-bottom: none;
@@ -1130,11 +1191,13 @@ select:hover {
   cursor: pointer;
 }
 
+
+
 button {
   appearance: none;
   background-color: transparent;
-  border: 0.125em solid #1A1A1A;
-  border-radius: 0.9375em;
+  border: 1.5px solid black;
+  border-radius: 4px;
   box-sizing: border-box;
   color: #3B3B3B;
   cursor: pointer;
@@ -1171,4 +1234,54 @@ button:hover {
 button:active {
   box-shadow: none;
   transform: translateY(0);
+}
+
+/* PhotoBoard */
+
+#photo_board {
+  width: 100%;
+  height: 85vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 14.8vh;
+}
+
+#photo_categori {
+  flex: 0.6;
+  border: 1px solid black;
+  width: 100%;
+  height: 100%;
+}
+
+#photo_list {
+  border: 1px solid black;
+  border-left: none;
+  border-right: none;
+  flex: 3;
+  width: 100%;
+  height: 100%;
+  padding-top: 4vh;
+}
+
+#photo_list div{
+  border: 1px solid black;
+}
+
+#photo_card{
+  padding: 10px 100px;
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+#photo{
+  margin: 0px 35px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 20%;
+  height: 100%;
 }

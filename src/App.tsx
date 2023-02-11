@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Footer from './Footer/Footer';
 import Header from './Header/Header';
-import Main from './Main/Main';
-import ProductListSection from './ProductListSection/ProductListSection';
-import TopBtn from './Header/TopBtn';
+import Home from './Home';
+import PhotoBoard from './PhotoBoard';
 
 function App() {
 
@@ -17,9 +16,10 @@ function App() {
   return (
     <BrowserRouter>
       <Header offEventHandelr={offEventHandelr} />
-      <Main offEventHandelr={offEventHandelr} />
-      <TopBtn offEventHandelr={offEventHandelr} />
-      <ProductListSection offEvent={offEvent} />
+      <Routes>
+        <Route path='/' element={<Home offEvent={offEvent} offEventHandelr={offEventHandelr} />} />
+        <Route path='photo' element={<PhotoBoard />} />
+      </Routes>
       <Footer />
     </BrowserRouter>
   );

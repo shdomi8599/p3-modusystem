@@ -7,6 +7,15 @@ export interface product {
     img?: string | string[];
 }
 
+export interface allData {
+    id?: string;
+    address1?: string | null;
+    address2?: string;
+    content?: string;
+    tel?: string;
+    option?: string[];
+}
+
 export type allProduct =
     [
         { 차량차단기: product[] }, { 리모콘: product[] }, { RF카드: product[] }, { 주차권발행: product[] },
@@ -26,7 +35,6 @@ export type navLiList = [
     navLi,
     navLi,
     navLi,
-    navLi
 ]
 
 export type productList = {

@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import BlockPage from "../../Components/BlockPage";
 import RequestBtnForm from "./RequestBtnForm";
 let body = document.querySelector('body')!
 
-const RequestBtn = () => {
+const RequestBtn = ({ messageHandeler }: { messageHandeler: (text: string) => void }) => {
 
-    const [form, setForm] = useState(false)
+    const [form, setForm] = useState<boolean>(false)
 
     const formHandeler = () => {
         setForm(!form)
@@ -15,14 +15,14 @@ const RequestBtn = () => {
 
     return <>
         {form && <>
-            <RequestBtnForm formHandeler={formHandeler} />
+            <RequestBtnForm formHandeler={formHandeler} messageHandeler={messageHandeler} />
             <BlockPage />
         </>}
         <div id="main_scroll_box" onClick={formHandeler}>
             <button id="request_btn">
                 <div>
                     <span>
-                        <p>온라인으로 의뢰하기</p><p>:)</p>
+                        <p>온라인으로 견적신청</p><p>:)</p>
                     </span>
                 </div>
                 <div>
