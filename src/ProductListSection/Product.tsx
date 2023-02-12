@@ -29,8 +29,8 @@ const Product = ({ product, isDetailHandeler, isDetail }: propsData) => {
         {detailData !== undefined && isDetail && <ContentDetail isDetailHandeler={isDetailHandeler} detailData={detailData} />}
         <div className="product" >
             <div className={imgBoxClass}>
-                {typeof product.img === "string" && <img id="product_img" src={product.img} />}
-                {typeof product.img === 'object' && product.img.map(src => <img id="product_img" src={`../images/주차부스/${src}`} key={src} />)}
+                {typeof product.img === "string" && <img id="product_img" src={product.img} alt='product' />}
+                {typeof product.img === 'object' && product.img.map(src => <img id="product_img" src={`../images/주차부스/${src}`} key={src} alt='booth' />)}
             </div>
             <div className={contentsBoxClass}>
                 <div id="product_contents_top">

@@ -26,7 +26,9 @@ const NavLiSmall = ({ name, categori, id, offEventHandelr }: propsData) => {
     return <li>
         {Object.keys(categori)[0] === "제품소개" ? <a href="#!" onClick={moveCategoriEvent}>{name}</a>
             :
-            Object.keys(categori)[0] === "회사소개" ? <a href="#!" onClick={introEvent}>{name}</a> : <a href="#!">{name}</a>}
+            Object.keys(categori)[0] === "회사소개" ? <a href="#!" onClick={introEvent}>{name}</a>
+                :
+                <a href="#!">{name}</a>}
     </li>
 }
 

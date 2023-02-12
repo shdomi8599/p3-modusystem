@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Footer from './Footer/Footer';
-import Header from './Header/Header';
-import Home from './Home';
-import PhotoBoard from './PhotoBoard';
+import Home from './Home/Home';
+import Navbar from './Navbar';
+import PhotoBoard from './PhotoBoard/PhotoBoard';
 
 function App() {
 
@@ -13,12 +13,13 @@ function App() {
   const offEventHandelr = () => {
     setOffEvent(!offEvent)
   }
+
   return (
     <BrowserRouter>
-      <Header offEventHandelr={offEventHandelr} />
+      <Navbar offEventHandelr={offEventHandelr} />
       <Routes>
         <Route path='/' element={<Home offEvent={offEvent} offEventHandelr={offEventHandelr} />} />
-        <Route path='photo' element={<PhotoBoard />} />
+        <Route path='/photo' element={<PhotoBoard />} />
       </Routes>
       <Footer />
     </BrowserRouter>

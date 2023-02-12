@@ -19,11 +19,11 @@ const NavLi = ({ categori, offEventHandelr }: { categori: navLi, offEventHandelr
         {triangle && <>
             <div id='nav_triangle_box'>
                 <div id='nav_triangle'>
-                    <img src={"../images/triangle.png"} />
+                    {Object.keys(categori)[0] !== '주요설치현황' && <img src={"../images/아이콘/triangle.png"} alt='triangle' />}
                 </div>
             </div>
         </>}
-        <a>{Object.keys(categori)}</a>
+        {Object.keys(categori)[0] === '주요설치현황' ? <a href="/photo">{Object.keys(categori)}</a> : <a href="#!">{Object.keys(categori)}</a>}
         <ul onMouseOut={downHandler}>
             {liList.map((x: string, i: number) =>
                 <NavLiSmall name={x} key={i} categori={categori} id={liList.indexOf(x)} offEventHandelr={offEventHandelr} />)}

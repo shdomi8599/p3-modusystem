@@ -56,10 +56,10 @@ const ProductList = ({ productList, offEvent }: propsData) => {
             {list === "차량차단기" || list === "리모콘" || list === "차량번호인식" || list === "주차부스" ||
                 <>
                     <div id="left_arrow">
-                        <img onClick={offAndLeft} src={"../images/left-arrow.png"} />
+                        <img onClick={offAndLeft} src={"../images/아이콘/left-arrow.png"} alt='left'/>
                     </div>
                     <div id="right_arrow">
-                        <img onClick={offAndRight} src={"../images/right-arrow.png"} />
+                        <img onClick={offAndRight} src={"../images/아이콘/right-arrow.png"} alt='right' />
                     </div>
                 </>
             }

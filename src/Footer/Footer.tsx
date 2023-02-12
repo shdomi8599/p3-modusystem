@@ -3,7 +3,7 @@ import React from "react";
 const Footer = () => {
     return <footer>
         <div id="footer_logo">
-            <img id="modu_logo" src={"../images/MODOO2.png"} />
+            <img id="modu_logo" src={"../images/로고/MODOO2.png"} alt='logo' />
         </div>
         <div id="footer_content">
             <div>

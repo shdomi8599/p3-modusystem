@@ -15,7 +15,7 @@ const ContentDetail = ({ isDetailHandeler, detailData }: propsData) => {
     return <div id="detail_box">
         <div id="detail_page">
             <div id="detail_X_box">
-                <img onClick={closeEvent} src={"../images/free-icon-x-657059.png"} />
+                <img onClick={closeEvent} src={"../images/아이콘/free-icon-x-657059.png"} alt='x' />
             </div>
             <div className="detail_product_name">
                 <span>{id}</span>

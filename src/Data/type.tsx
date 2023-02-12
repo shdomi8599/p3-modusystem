@@ -40,3 +40,13 @@ export type navLiList = [
 export type productList = {
     [index: string]: string | string[] | undefined
 }
+
+export type img = {
+    title: string;
+    src: string[];
+    categori: string[];
+}
+
+export type imgGroup = img[]
+
+export type allImg = imgGroup[]

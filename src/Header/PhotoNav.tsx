@@ -1,0 +1,25 @@
+import React from "react";
+
+const PhotoNav = () => {
+    return <header>
+        <div id='nav_header' >
+            <div id='nav_header_content'>
+                <span className='nav_header' >로그인</span>
+                <span className='nav_header' >로그인</span>
+                <span className='nav_header' >로그인</span>
+                <span id='nav_login'>로그인</span>
+            </div>
+            <div className='w0_5'></div>
+        </div>
+        <nav>
+            <ul id='nav_ul'>
+                <li className='nav_li' id="nav_title">
+                    <a id='photo_a' href='/'><img id="modu_logo" src={"../images/로고/MODOO1.png"} alt={'logo'} /></a>
+                </li>
+            </ul>
+        </nav>
+        <div className='w0_5'></div>
+    </header>
+}
+
+export default PhotoNav;

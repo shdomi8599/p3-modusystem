@@ -20,7 +20,7 @@ const TopBtn = ({ offEventHandelr }: { offEventHandelr: () => void }) => {
     return <>
         {scrollY > 400 &&
             <div id="top_btn_box">
-                <img onClick={moveTop} id="top_btn" src={"../images/upward-arrow.png"} />
+                <img onClick={moveTop} id="top_btn" src={"../images/아이콘/upward-arrow.png"} alt='top_btn' />
             </div>}
     </>
 }
