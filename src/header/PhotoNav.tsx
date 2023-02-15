@@ -1,6 +1,6 @@
 import React from "react";
 
-const PhotoNav = () => {
+const BoardNav = () => {
     return <header>
         <div id='nav_header' >
             <div id='nav_header_content'>
@@ -22,4 +22,4 @@ const PhotoNav = () => {
     </header>
 }
 
-export default PhotoNav;
+export default BoardNav;

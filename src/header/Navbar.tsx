@@ -1,7 +1,7 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
 import MainNav from './MainNav';
-import PhotoNav from './PhotoNav';
+import BoardNav from './PhotoNav';
 
 const Navbar = ({ offEventHandelr }: { offEventHandelr: () => void }) => {
   const location = useLocation();
@@ -9,7 +9,7 @@ const Navbar = ({ offEventHandelr }: { offEventHandelr: () => void }) => {
     <>
       {location.pathname === '/' && <HomeNav offEventHandelr={offEventHandelr} />}
       {location.pathname === '/photoBoard' && <Board />}
-      {location.pathname === '/contact' && <ServiceCenter />}
+      {location.pathname === '/serviceBoard' && <Board />}
     </>
   );
 }
@@ -17,11 +17,6 @@ const HomeNav = ({ offEventHandelr }: { offEventHandelr: () => void }) => {
   return <MainNav offEventHandelr={offEventHandelr} />
 }
 const Board = () => {
-  return <PhotoNav />
-}
-const ServiceCenter = () => {
-  return (
-    <></>
-  );
+  return <BoardNav />
 }
 export default Navbar;

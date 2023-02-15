@@ -5,6 +5,7 @@ import Footer from './footer/Footer';
 import Home from './home/Home';
 import Navbar from './header/Navbar';
 import PhotoBoard from './photoBoard/PhotoBoard';
+import ServiceBoard from './serviceBoard/ServiceBoard';
 
 function App() {
   //상세보기 페이지 off 기능
@@ -19,6 +20,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home offEvent={offEvent} offEventHandelr={offEventHandelr} />} />
         <Route path='/photoBoard' element={<PhotoBoard />} />
+        <Route path='/serviceBoard' element={<ServiceBoard />} />
       </Routes>
       <Footer />
     </BrowserRouter>

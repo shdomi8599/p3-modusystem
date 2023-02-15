@@ -1475,3 +1475,84 @@ button:active {
   right: 800px;
   margin: '1rem'
 }
+
+/* ServiceBoard */
+#service {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 14.8vh;
+  height: 110vh;
+  margin-bottom: 10vh;
+  border-bottom: 1px solid black;
+  width: 100%;
+}
+
+#service>div {
+  width: 95%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#service>div>div:first-child {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex: 1;
+  border-right: 1px solid black;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  padding: 30px 0px;
+  margin-left: -46px;
+}
+
+#service>div>div:last-child {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex: 5;
+  width: 100%;
+  height: 100%;
+  padding: 2vh 1vw 1vw 8vh;
+
+}
+
+#service_categori button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black;
+  width: 80%;
+  height: 10%;
+  margin: 15px 0px;
+  font-size: 1.4rem;
+}
+
+#service_board>div {
+  width: 100%;
+  border: 1px solid black;
+}
+
+#service_board_header {
+  flex: 0.25;
+}
+
+#service_board_top {
+  flex: 0.3;
+}
+
+#service_board_bottom {
+  flex: 1;
+}
+
+#service_board_page {
+  flex: 0.16;
+}
+
+#service_board_search {
+  flex: 0.18;
+}
