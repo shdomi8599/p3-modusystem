@@ -50,3 +50,24 @@ export type img = {
 export type imgGroup = img[]
 
 export type allImg = imgGroup[]
+
+export interface announcement {
+    id: string;
+    title: string;
+    content: string;
+    author: string;
+    createAt: string;
+    view: number
+}
+export interface question extends announcement {
+
+}
+
+export interface reference extends announcement {
+    link: string;
+}
+
+
+export type stringKeyObj = {
+    [key: string]: string
+}
