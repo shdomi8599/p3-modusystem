@@ -8,8 +8,8 @@ const Navbar = ({ offEventHandelr }: { offEventHandelr: () => void }) => {
   return (
     <>
       {location.pathname === '/' && <HomeNav offEventHandelr={offEventHandelr} />}
-      {location.pathname === '/photoBoard' && <Board />}
-      {location.pathname === '/serviceBoard' && <Board />}
+      {location.pathname === '/photo' && <Board />}
+      {location.pathname === '/service' && <Board />}
     </>
   );
 }

@@ -19,8 +19,8 @@ function App() {
       <Navbar offEventHandelr={offEventHandelr} />
       <Routes>
         <Route path='/' element={<Home offEvent={offEvent} offEventHandelr={offEventHandelr} />} />
-        <Route path='/photoBoard' element={<PhotoBoard />} />
-        <Route path='/serviceBoard' element={<ServiceBoard />} />
+        <Route path='/photo' element={<PhotoBoard />} />
+        <Route path='/service' element={<ServiceBoard />} />
       </Routes>
       <Footer />
     </BrowserRouter>

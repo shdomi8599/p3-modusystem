@@ -651,7 +651,7 @@ footer {
 
 /* ProductList */
 
-#productList_section{
+#productList_section {
   border-bottom: 1px solid rgb(230, 210, 210);
 }
 
@@ -1516,7 +1516,7 @@ button:active {
 
 #service>div>div:last-child {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
   flex-direction: column;
   flex: 5;
@@ -1552,10 +1552,17 @@ button:active {
   font-size: 2rem;
   border-bottom: 1px solid black;
   height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#service_board_header span {
+  display: inline-block;
 }
 
 #service_board_top {
-  flex: 0.3;
+  flex: 0.1;
   flex-direction: column;
   height: 100%;
   width: 100%;
@@ -1675,13 +1682,151 @@ button:active {
   padding-top: 10px;
 }
 
-#service_board_page span{
+#service_board_page span {
   margin: 0 15px;
   cursor: pointer;
 }
 
 #service_board_search {
   flex: 0.18;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#view_board {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  top: 150px;
+  left: 400px;
+  border: 1px solid rgb(238, 198, 198);
+  background-color: white;
+  z-index: 2;
+  width: 1440px;
+  height: 850px;
+  padding: 40px;
+  color: black;
+}
+
+#view_board div {
+  width: 100%;
+}
+
+#view_top_btn_box {
+  padding-bottom: 10px;
+}
+
+
+#view_top {
+  height: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.view_top_content {
+  padding-left: 30px;
+}
+
+#view_top div {
+  display: flex;
+  align-items: center;
+}
+
+#view_top_title {
+  height: 70%;
+  font-size: x-large
+}
+
+#view_top_detail {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+#view_top_detail span {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+#view_content {
+  height: 70%;
+  margin-top: 10px;
+  padding: 30px;
+}
+
+#view_bottom {
+  height: 10%;
+}
+
+#addQuestionBtn {
+  margin-bottom: -30px;
+  margin-right: 10px;
+  width: 7%;
+}
+
+#question_form {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 1440px;
+  height: 850px;
+  top: 150px;
+  left: 400px;
+  background-color: white;
+  z-index: 2;
+  padding: 40px;
+  border: 1px solid rgb(238, 198, 198);
+}
+
+#question_form div {
+  width: 100%
+}
+
+#question_form_top {
+  height: 30%;
+}
+
+#question_form_top>div:last-child {
+  padding-left: 30px;
+  height: 80%
+}
+
+#question_form_top>div:last-child>div:last-child {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 80%;
+  padding-right: 30px;
+}
+
+#question_form_top input {
+  width: 100%;
+  height: 50%;
+  padding: 10px 20px;
+  font-size: 2.3rem;
+}
+
+#question_form_middle {
+  height: 60%;
+  padding: 30px;
+}
+
+#question_textarea {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  font-size: 1.3rem;
+}
+
+#question_form_bottom {
+  height: 10%;
   display: flex;
   align-items: center;
   justify-content: center;

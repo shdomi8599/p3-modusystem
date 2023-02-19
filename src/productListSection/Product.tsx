@@ -24,8 +24,6 @@ const Product = ({ product, isDetailHandeler, isDetail }: propsData) => {
         imgBoxClass = "product_img_box_booth";
         contentsBoxClass = "product_contents_box_booth"
     }
-    console.log(product.img)
-
     return <>
         {detailData !== undefined && isDetail && <ContentDetail isDetailHandeler={isDetailHandeler} detailData={detailData} />}
         <div className="product" >

@@ -24,10 +24,10 @@ const NavLi = ({ categori, offEventHandelr }: { categori: navLi, offEventHandelr
             </div>
         </>}
         {Object.keys(categori)[0] === '주요설치현황' ?
-            <a href="/photoBoard">{Object.keys(categori)}</a>
+            <a href="/photo">{Object.keys(categori)}</a>
             :
             Object.keys(categori)[0] === '고객서비스' ?
-                <a href="/serviceBoard">{Object.keys(categori)}</a>
+                <a href="/service">{Object.keys(categori)}</a>
                 :
                 <a href="#!">{Object.keys(categori)}</a>}
         <ul onMouseOut={downHandler}>

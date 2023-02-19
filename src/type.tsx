@@ -60,7 +60,7 @@ export interface announcement {
     view: number
 }
 export interface question extends announcement {
-
+    link?: string
 }
 
 export interface reference extends announcement {

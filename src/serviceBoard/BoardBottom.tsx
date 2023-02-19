@@ -1,24 +1,22 @@
 import React, { useEffect, useState } from "react";
 import { getService } from "../api/getService";
-import { question, reference, stringKeyObj } from "../type";
-import ServiceBottomRow from "./ServiceBottomRow";
+import { question, reference } from "../type";
+import ServiceBottomRow from "./ServiceRow";
+type propsData = {
+    nowList: string;
+    nowPage: number;
+    categori: string
+}
 
-const BoardBottom = ({ categori }: { categori: string }) => {
-    const changeCategori: stringKeyObj = {
-        '공지사항': 'announcement',
-        '질문게시판': 'question',
-        '자료실': 'reference'
-    }
-
-    const nowList = changeCategori[categori]
-    console.log(nowList)
+const BoardBottom = ({ nowList, nowPage, categori }: propsData) => {
     const [list, setList] = useState<reference[] | question[] | []>([])
     //위에서 상태를 전달받으면 그걸 검색해서 표시
     useEffect(() => {
-        getService(nowList).then(res => {
+        setList([]);
+        getService(nowList, nowPage).then(res => {
             setList(res)
         })
-    }, [nowList])
+    }, [nowList, nowPage])
     return <div id="service_board_bottom">
         {list.map(data =>
             <ServiceBottomRow data={data} categori={categori} key={data.id} />)}
