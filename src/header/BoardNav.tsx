@@ -4,10 +4,6 @@ const BoardNav = () => {
     return <header>
         <div id='nav_header' >
             <div id='nav_header_content'>
-                <span className='nav_header' >로그인</span>
-                <span className='nav_header' >로그인</span>
-                <span className='nav_header' >로그인</span>
-                <span id='nav_login'>로그인</span>
             </div>
             <div className='w0_5'></div>
         </div>

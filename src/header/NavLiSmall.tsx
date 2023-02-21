@@ -1,10 +1,13 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 type propsData = {
     name: string, categori: {};
     id: number, offEventHandelr: () => void;
 }
 
 const NavLiSmall = ({ name, categori, id, offEventHandelr }: propsData) => {
+
+    const navigate = useNavigate()
     //target들에게서 추출한 높이
     const scrollCategoriList = [597, 1114, 1683, 2252, 2769, 3338, 3855, 4424]
 
@@ -12,6 +15,10 @@ const NavLiSmall = ({ name, categori, id, offEventHandelr }: propsData) => {
     const moveCategoriEvent = () => {
         offEventHandelr()
         window.scrollTo({ left: 0, top: scrollCategoriList[id] - 50, behavior: "smooth" });
+    }
+
+    const navService = () => {
+        navigate('/service', { state: { id: name } })
     }
 
     //메인 페이지 스크롤을 도와주는 함수
@@ -28,7 +35,9 @@ const NavLiSmall = ({ name, categori, id, offEventHandelr }: propsData) => {
             :
             Object.keys(categori)[0] === "회사소개" ? <a href="#!" onClick={introEvent}>{name}</a>
                 :
-                <a href="#!">{name}</a>}
+                Object.keys(categori)[0] === "고객서비스" ? <a href="#!" onClick={navService}>{name}</a>
+                    :
+                    <a href="#!">{name}</a>}
     </li>
 }
 

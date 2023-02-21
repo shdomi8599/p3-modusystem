@@ -3,30 +3,23 @@ import { navLiList } from '../type';
 import NavLi from './NavLi';
 
 const MainNav = ({ offEventHandelr }: { offEventHandelr: () => void; }) => {
-
     const navLiList: navLiList = [
         { 회사소개: ["인사말", "조직도", "찾아오시는길"] },
-        { 제품소개: ["차량차단기", "리모콘", "RF카드방식", "주차권발행기", "차량번호인식기", "요금계산기", "주차부스", "신호관제", "기타제품"] },
+        { 제품소개: ["차량차단기", "리모콘", "RF카드방식", "주차권발행기", "차량번호인식기", "요금계산기", "주차부스", "신호관제"] },
         { 주요설치현황: [] },
         { 고객서비스: ["자료실", "공지사항", "게시판"] },
     ]
-
     //최상단 페이지로 이동하면서 메인지도 리셋시켜주는 함수
     let wrap_main = document.querySelector("#wrap_main")!
     const moveTop = () => {
         offEventHandelr()
         window.scrollTo({ left: 0, top: 0, behavior: "smooth" });
-        wrap_main && wrap_main.scrollTo({ left: 0, top: 0, behavior: "smooth" });
+        wrap_main.scrollTo({ left: 0, top: 0, behavior: "smooth" });
     }
-
     return <>
         <header>
             <div id='nav_header' >
                 <div id='nav_header_content'>
-                    <span className='nav_header' >로그인</span>
-                    <span className='nav_header' >로그인</span>
-                    <span className='nav_header' >로그인</span>
-                    <span id='nav_login'>로그인</span>
                 </div>
                 <div className='w0_5'></div>
             </div>

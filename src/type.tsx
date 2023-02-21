@@ -30,12 +30,7 @@ export type detailData = {
 
 export type navLi = { [key: string]: string[] }
 
-export type navLiList = [
-    navLi,
-    navLi,
-    navLi,
-    navLi,
-]
+export type navLiList = navLi[]
 
 export type productList = {
     [index: string]: string | string[] | undefined
@@ -57,10 +52,11 @@ export interface announcement {
     content: string;
     author: string;
     createAt: string;
-    view: number
+    view: number;
+    password: number | string
 }
 export interface question extends announcement {
-    link?: string
+    link?: string;
 }
 
 export interface reference extends announcement {

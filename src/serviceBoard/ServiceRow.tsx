@@ -14,7 +14,7 @@ const ServiceRow = ({ data, categori, indicate }: propsData) => {
     }
     const viewCount = () => {
         setView(view + 1)
-        window.scrollTo({ left: 0, top: 0, behavior: "smooth" });
+        window.scrollTo({ left: 0, top: 0, behavior: "smooth" })
         viewBoardHandeler()
     }
     //다른 글을보다가 카테고리를 눌렀을때 창이 꺼지도록 설정하는 effect
@@ -27,7 +27,7 @@ const ServiceRow = ({ data, categori, indicate }: propsData) => {
             <>
                 <div id="service_row">
                     {viewBoard &&
-                        <ViewBoard key={data.id} data={data} categori={categori} viewBoardHandeler={viewBoardHandeler} indicate={indicate} />}
+                        <ViewBoard key={data.id} data={data} categori={categori} viewBoardHandeler={viewBoardHandeler} indicate={indicate} view={view} />}
                     <div id="row_tag">
                         {indicate ? indicate : categori}
                     </div>
