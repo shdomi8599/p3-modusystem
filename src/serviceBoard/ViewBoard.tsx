@@ -31,6 +31,7 @@ const ViewBoard = ({ data, categori, viewBoardHandeler, indicate, view }: propsD
     const checkHandeler = () => {
         setCheck(true)
     }
+    //새로고침효과로 사용자에게 데이터가 변화된 걸 알리기 위한 effect
     useEffect(() => {
         if (check) {
             setTimeout(() => {
@@ -46,8 +47,10 @@ const ViewBoard = ({ data, categori, viewBoardHandeler, indicate, view }: propsD
     return <div id="view_board">
         {edit && <EditBoard formHandler={editHandeler} data={data} />}
         <div id="view_top">
-            {deletePassword && <PasswordForm passwordHandeler={passwordHandeler} data={data} message={'삭제하기'} checkHandeler={checkHandeler} editHandeler={editHandeler} />}
-            {editPassword && <PasswordForm passwordHandeler={editPasswordHandeler} data={data} message={'수정하기'} checkHandeler={checkHandeler} editHandeler={editHandeler} />}
+            {deletePassword
+                && <PasswordForm passwordHandeler={passwordHandeler} data={data} message={'삭제하기'} checkHandeler={checkHandeler} editHandeler={editHandeler} />}
+            {editPassword
+                && <PasswordForm passwordHandeler={editPasswordHandeler} data={data} message={'수정하기'} checkHandeler={checkHandeler} editHandeler={editHandeler} />}
             <div id="view_top_btn_box">
                 <div>
                     <button onClick={viewBoardHandeler}>뒤로가기</button>

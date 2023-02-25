@@ -1,25 +1,17 @@
-import React, { useEffect, useState } from "react";
-import { getService } from "../api/getService";
+import React from "react";
 import { question, reference } from "../type";
-import ServiceBottomRow from "./ServiceRow";
+import ServiceRow from "./ServiceRow";
 type propsData = {
-    nowList: string;
-    nowPage: number;
-    categori: string
+    categori: string;
+    list: reference[] | question[];
 }
 
-const BoardBottom = ({ nowList, nowPage, categori }: propsData) => {
-    const [list, setList] = useState<reference[] | question[] | []>([])
-    //위에서 상태를 전달받으면 그걸 검색해서 표시
-    useEffect(() => {
-        setList([]);
-        getService(nowList, nowPage).then(res => {
-            setList(res)
-        })
-    }, [nowList, nowPage])
+const BoardBottom = ({ categori, list }: propsData) => {
     return <div id="service_board_bottom">
-        {list.map(data =>
-            <ServiceBottomRow data={data} categori={categori} key={data.id} />)}
+        {list.length === 0 ?
+            <div style={{ marginTop: '150px' }}>일치하는 내용이 없습니다.</div>
+            :
+            list.map(data => <ServiceRow data={data} categori={categori} key={data.id} />)}
     </div>
 }
 

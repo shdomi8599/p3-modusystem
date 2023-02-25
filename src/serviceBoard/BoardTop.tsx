@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { getService } from "../api/getService";
 import { announcement, stringKeyObj } from "../type";
-import ServiceBottomRow from "./ServiceRow";
+import ServiceRow from "./ServiceRow";
 type propsData = {
     nowPage: number;
     categori: string
@@ -16,7 +16,7 @@ const BoardTop = ({ nowPage, categori }: propsData) => {
         "board_top_date": '작성일',
         "board_top_view": '조회수'
     }
-    const [announcement, setAnnouncement] = useState<announcement[] | []>([])
+    const [announcement, setAnnouncement] = useState<announcement[]>([])
     //위에서 상태를 전달받으면 그걸 검색해서 표시
     useEffect(() => {
         setAnnouncement([])
@@ -30,7 +30,7 @@ const BoardTop = ({ nowPage, categori }: propsData) => {
         </div>
         <div id="row_line"></div>
         {nowPage === 1 && announcement.map(announcement =>
-            <ServiceBottomRow categori={categori} indicate={indicate} data={announcement} key={announcement.id} />)}
+            <ServiceRow categori={categori} indicate={indicate} data={announcement} key={announcement.id} />)}
     </div>
 }
 

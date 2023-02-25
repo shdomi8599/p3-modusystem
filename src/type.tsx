@@ -63,7 +63,16 @@ export interface reference extends announcement {
     link: string;
 }
 
-
 export type stringKeyObj = {
     [key: string]: string
+}
+
+export type filterTitle = {
+    title: string
+}
+export type filterAuthor = {
+    author: string
+}
+export type filterContent = {
+    content: string
 }

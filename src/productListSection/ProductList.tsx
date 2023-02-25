@@ -7,9 +7,10 @@ type propsData = {
 }
 
 const ProductList = ({ productList, offEvent }: propsData) => {
+    //화살표가 좌측이나 우측끝에서 없어지기 위한 state
+    const [page, setPage] = useState(0)
     //디테일 페이지 state
     const [isDetail, setIsDetail] = useState(false);
-
     //디테일 페이지의 상태를 변경하는 함수
     const isDetailHandeler = (boolean: boolean) => {
         setIsDetail(boolean)
@@ -28,24 +29,32 @@ const ProductList = ({ productList, offEvent }: propsData) => {
     const offAndRight = () => {
         detailOff().then(() => {
             target.current?.scrollTo({ left: target.current?.scrollLeft + target.current?.scrollWidth / target.current?.childElementCount, top: 0, behavior: "smooth" });
+            if (product.length - 1 > page) {
+                setPage(page + 1)
+            }
         })
     }
     const offAndLeft = () => {
         detailOff().then(() => {
             target.current?.scrollTo({ left: target.current?.scrollLeft - target.current?.scrollWidth / target.current?.childElementCount, top: 0, behavior: "smooth" });
+            if (page !== 0) {
+                setPage(page - 1)
+            }
         })
     }
     return <div id="productList_box" >
         <div id="line_box">
             {list === "차량차단기" || list === "리모콘" || list === "차량번호인식" || list === "주차부스" ||
                 <>
-                    <div id="left_arrow">
-                        <img onClick={offAndLeft} src={"http://localhost:3001/uploads/아이콘/left-arrow.png"} alt='left' />
-                    </div>
-                    <div id="right_arrow">
-                        <img onClick={offAndRight} src={"http://localhost:3001/uploads/아이콘/right-arrow.png"} alt='right' />
-                    </div>
-
+                    {page !== 0 &&
+                        <div id="left_arrow">
+                            <img onClick={offAndLeft} src={"http://localhost:3001/uploads/아이콘/left-arrow.png"} alt='left' />
+                        </div>
+                    }
+                    {product.length - 1 > page &&
+                        <div id="right_arrow">
+                            <img onClick={offAndRight} src={"http://localhost:3001/uploads/아이콘/right-arrow.png"} alt='right' />
+                        </div>}
                 </>
             }
             <div className="w0_5b">
