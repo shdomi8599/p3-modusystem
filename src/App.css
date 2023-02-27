@@ -1,6 +1,7 @@
 @font-face {
-  font-family: 'NEXON Lv2 Gothic';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic.woff') format('woff');
+  font-family: "NEXON Lv2 Gothic";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic.woff")
+    format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -9,7 +10,7 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  font-family: 'NEXON Lv2 Gothic';
+  font-family: "NEXON Lv2 Gothic";
 }
 
 a {
@@ -19,7 +20,7 @@ a {
 /* Header */
 
 header {
-  background-color: #388FE4;
+  background-color: #388fe4;
   position: fixed;
   width: 1900px;
   z-index: 4;
@@ -41,9 +42,9 @@ nav {
   cursor: pointer;
 }
 
-#nav_header_content>a {
+#nav_header_content > a {
   border: none;
-  color: #388FE4;
+  color: #388fe4;
   background-color: white;
   padding: 5px 10px;
   border-radius: 5px;
@@ -68,9 +69,8 @@ nav {
 
 #nav_ul:after {
   display: block;
-  content: '';
+  content: "";
   clear: both;
-
 }
 
 #nav_title {
@@ -120,7 +120,6 @@ nav {
   height: 40px;
   line-height: 40px;
   color: #fff;
-
 }
 
 .nav_li:hover ul {
@@ -133,7 +132,7 @@ nav {
   top: 70px;
   left: -50;
   text-align: center;
-  background-color: #434C6D;
+  background-color: #434c6d;
   border-radius: 8px;
   z-index: 2;
   width: 170px;
@@ -152,7 +151,6 @@ nav {
 
 .nav_li ul li {
   list-style: none;
-
 }
 
 .nav_li ul li:last-child a {
@@ -176,7 +174,7 @@ nav {
 }
 
 #main {
-  background-color: #388FE4;
+  background-color: #388fe4;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -239,7 +237,7 @@ nav {
 
 #main_scroll_box button,
 #main_scroll_box button div {
-  transition: 0.6s cubic-bezier(.16, 1, .3, 1);
+  transition: 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 #main_scroll_box button div span {
@@ -251,7 +249,7 @@ nav {
 }
 
 #main_scroll_box button div:nth-child(1) {
-  background-color: #398FE4
+  background-color: #398fe4;
 }
 
 #main_scroll_box button div:nth-child(2) {
@@ -282,7 +280,6 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 
 #mail_form {
@@ -338,7 +335,7 @@ nav {
   padding-top: 50px;
 }
 
-input[type=text] {
+input[type="text"] {
   width: 59%;
   border: 2px solid #aaa;
   border-radius: 4px;
@@ -346,10 +343,10 @@ input[type=text] {
   outline: none;
   padding: 4px;
   box-sizing: border-box;
-  transition: .3s;
+  transition: 0.3s;
 }
 
-input[type=password] {
+input[type="password"] {
   width: 59%;
   border: 2px solid #aaa;
   border-radius: 4px;
@@ -357,15 +354,15 @@ input[type=password] {
   outline: none;
   padding: 4px;
   box-sizing: border-box;
-  transition: .3s;
+  transition: 0.3s;
 }
 
-input[type=text]:focus {
+input[type="text"]:focus {
   border-color: rgb(255, 0, 0);
   box-shadow: 0 0 8px 0 dodgetBlue;
 }
 
-input[type=password]:focus {
+input[type="password"]:focus {
   border-color: rgb(255, 0, 0);
   box-shadow: 0 0 8px 0 dodgetBlue;
 }
@@ -378,9 +375,8 @@ select {
   outline: none;
   padding: 4px;
   box-sizing: border-box;
-  transition: .3s;
+  transition: 0.3s;
 }
-
 
 #mail_content_box {
   display: flex;
@@ -398,10 +394,9 @@ textarea {
   margin: 2px 0;
   padding: 2px;
   box-sizing: border-box;
-  transition: .3s;
+  transition: 0.3s;
   outline-color: rgb(255, 0, 0);
 }
-
 
 input:focus {
   outline: none;
@@ -418,7 +413,6 @@ input:focus {
   align-items: center;
 }
 
-
 #mail_form_name input {
   --clr-font-main: hsla(0 0% 20% / 100);
   --btn-bg-1: hsla(194 100% 69% / 1);
@@ -433,11 +427,19 @@ input:focus {
   font-weight: 600;
   transition: 0.8s;
   background-size: 280% auto;
-  background-image: linear-gradient(325deg, var(--btn-bg-2) 0%, var(--btn-bg-1) 55%, var(--btn-bg-2) 90%);
+  background-image: linear-gradient(
+    325deg,
+    var(--btn-bg-2) 0%,
+    var(--btn-bg-1) 55%,
+    var(--btn-bg-2) 90%
+  );
   border: none;
   border-radius: var(--radii);
   color: var(--btn-bg-color);
-  box-shadow: 0px 0px 20px rgba(71, 184, 255, 0.5), 0px 5px 5px -1px rgba(58, 125, 233, 0.25), inset 4px 4px 8px rgba(175, 230, 255, 0.5), inset -4px -4px 8px rgba(19, 95, 216, 0.35);
+  box-shadow: 0px 0px 20px rgba(71, 184, 255, 0.5),
+    0px 5px 5px -1px rgba(58, 125, 233, 0.25),
+    inset 4px 4px 8px rgba(175, 230, 255, 0.5),
+    inset -4px -4px 8px rgba(19, 95, 216, 0.35);
 }
 
 #mail_form_name input:hover {
@@ -492,11 +494,10 @@ input:focus {
   align-items: center;
   height: 125px;
   cursor: pointer;
-
 }
 
 #main_categori_box ul li:hover {
-  background-color: #388FE4;
+  background-color: #388fe4;
   border-radius: 5px;
   box-shadow: 0 1px 6px #394f77;
 }
@@ -511,7 +512,6 @@ input:focus {
   box-shadow: 0 1px 6px #394f77;
   margin: 0 10px;
   width: 450px;
-
 }
 
 .main_categori_img {
@@ -520,7 +520,6 @@ input:focus {
   border-radius: 5px;
 }
 
-
 html {
   scroll-behavior: smooth;
 }
@@ -528,7 +527,7 @@ html {
 /* MainGreetings */
 
 #main_section {
-  background-color: #388FE4;
+  background-color: #388fe4;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -580,7 +579,7 @@ html {
 }
 
 #greetings_box div {
-  width:830px;
+  width: 830px;
 }
 
 #greetings_box div:last-child {
@@ -609,7 +608,7 @@ html {
   position: relative;
   width: 63px;
   height: 37px;
-  background-color: #388FE4;
+  background-color: #388fe4;
   padding: 1px 10px;
   border-radius: 10px;
   color: white;
@@ -628,7 +627,6 @@ footer {
   align-items: center;
   height: 110px;
   padding: 70px 170px;
-
 }
 
 #footer_logo {
@@ -661,7 +659,6 @@ footer {
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
-
 }
 
 #productList_box {
@@ -683,7 +680,7 @@ footer {
 
 .w0_5b {
   transform: scaleY(0.3);
-  border-top: 1px solid #388FE4;
+  border-top: 1px solid #388fe4;
   width: 1520px;
   height: 1px;
 }
@@ -740,12 +737,12 @@ footer {
 
 #left_arrow img:active {
   position: relative;
-  right: 2px
+  right: 2px;
 }
 
 #right_arrow img:active {
   position: relative;
-  left:  2px
+  left: 2px;
 }
 
 .product_img_box {
@@ -783,15 +780,14 @@ footer {
 }
 
 .product_img_box_booth::-webkit-scrollbar-thumb {
-  background: #388FE4;
+  background: #388fe4;
   border-radius: 10px;
 }
 
 .product_img_box_booth::-webkit-scrollbar-track {
-  background: rgba(33, 122, 244, .1);
+  background: rgba(33, 122, 244, 0.1);
   /*스크롤바 뒷 배경 색상*/
 }
-
 
 .product_img_box_booth {
   display: flex;
@@ -834,7 +830,7 @@ footer {
 #product_contents_top span {
   padding: 10px 30px;
   border-radius: 20px;
-  color: #388FE4
+  color: #388fe4;
 }
 
 #product_contents_bottom {
@@ -855,13 +851,13 @@ footer {
   margin: 0px 15px;
   border-radius: 20px;
   cursor: pointer;
-  box-shadow: 0 0px 3px 1.5px #388FE4;
+  box-shadow: 0 0px 3px 1.5px #388fe4;
   width: 212px;
   font-weight: 600;
 }
 
 .product_contents_bottom_contents:hover {
-  background-color: #388FE4;
+  background-color: #388fe4;
   color: white;
 }
 
@@ -955,7 +951,6 @@ footer {
   position: relative;
 }
 
-
 /* 진동효과 참고 링크 https://gurtn.tistory.com/170 */
 #top_btn {
   width: 60px;
@@ -979,7 +974,7 @@ footer {
 /* notification_message */
 
 .notification-container {
-  background: rgba(0, 0, 0, .3);
+  background: rgba(0, 0, 0, 0.3);
   border-radius: 10px 10px 0 0;
   padding: 5px 10px;
   position: absolute;
@@ -1065,8 +1060,8 @@ label {
   justify-content: flex-start;
   align-items: center;
   padding-left: 30px;
-  width: 100%;
-  height: 100%;
+  width: 895px;
+  height: 94px;
   padding: 10px;
   padding-left: 30px;
 }
@@ -1091,20 +1086,20 @@ label {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  width: 100%;
-  height: 100%;
+  width: 895px;
+  height: 300px;
   flex-direction: column;
 }
 
 .additional textarea {
   margin-top: 10px;
   min-height: 150px;
-  font-size: 1.2rem;
-  width: 87%;
+  font-size: 20px;
+  width: 750px;
 }
 
 .hope select {
-  width: 30%;
+  width: 160px;
 }
 
 .hope div:last-child {
@@ -1112,14 +1107,14 @@ label {
   justify-content: flex-start;
   border: 2px solid #aaa;
   max-width: 750px;
-  height: 50%;
+  height: 92px;
   padding: 10px;
   margin-top: 10px;
 }
 
 .product_icon {
   display: inline;
-  height: 50%;
+  height: 34px;
   padding: 7px;
   border-radius: 10px;
   margin: 0px 5px;
@@ -1132,8 +1127,8 @@ label {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  height: 100%;
+  width: 895px;
+  height: 100px;
 }
 
 #submit_btn {
@@ -1148,7 +1143,7 @@ select {
   outline: none;
   padding: 4px;
   box-sizing: border-box;
-  transition: .3s;
+  transition: 0.3s;
   margin-left: 10px;
 }
 
@@ -1159,8 +1154,8 @@ select:hover {
 
 #block_page {
   left: 0;
-  width: 100vw;
-  height: 200vh;
+  width: 1900px;
+  height: 1500px;
   z-index: 4;
   position: absolute;
   background-color: #394f77;
@@ -1196,18 +1191,17 @@ select:hover {
   cursor: pointer;
 }
 
-
-
 button {
   appearance: none;
   background-color: transparent;
   border: 1.5px solid black;
   border-radius: 4px;
   box-sizing: border-box;
-  color: #3B3B3B;
+  color: #3b3b3b;
   cursor: pointer;
   display: inline-block;
-  font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 16px;
   font-weight: 600;
   line-height: normal;
@@ -1218,7 +1212,7 @@ button {
   padding: 5px 5px;
   text-align: center;
   text-decoration: none;
-  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  transition: all 300ms cubic-bezier(0.23, 1, 0.32, 1);
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
@@ -1231,7 +1225,7 @@ button:disabled {
 
 button:hover {
   color: #fff;
-  background-color: #1A1A1A;
+  background-color: #1a1a1a;
   box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
   transform: translateY(-2px);
 }
@@ -1240,7 +1234,7 @@ button:active {
   box-shadow: none;
   transform: translateY(0);
 }
-
+/* 여기까지 */
 /* PhotoBoard */
 
 #photo_board {
@@ -1251,7 +1245,6 @@ button:active {
   align-items: center;
   padding-top: 14.8vh;
   margin-bottom: 1.5vh;
-
 }
 
 #photo_categori {
@@ -1267,8 +1260,7 @@ button:active {
   top: 0px;
 }
 
-
-#photo_categori>div {
+#photo_categori > div {
   border: 1px solid rgb(230, 210, 210);
   height: 6%;
   display: flex;
@@ -1282,19 +1274,19 @@ button:active {
   border-radius: 5px;
 }
 
-#photo_categori>div:hover {
+#photo_categori > div:hover {
   background-color: black;
   color: white;
 }
 
-#photo_categori>div div:first-child {
+#photo_categori > div div:first-child {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   flex: 1.5;
 }
 
-#photo_categori>div div:last-child {
+#photo_categori > div div:last-child {
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -1403,7 +1395,7 @@ button:active {
   height: 100%;
   color: black;
   list-style: none;
-  background-color: #388FE4;
+  background-color: #388fe4;
   margin-top: 2px;
   color: white;
   border-radius: 5px;
@@ -1414,7 +1406,7 @@ button:active {
   width: 1000px;
   height: 600px;
   position: fixed;
-  background-color: #1A1A1A;
+  background-color: #1a1a1a;
   z-index: 5;
   top: 100px;
   left: 460px;
@@ -1479,7 +1471,7 @@ button:active {
   position: absolute;
   bottom: 400px;
   right: 800px;
-  margin: '1rem'
+  margin: "1rem";
 }
 
 /* ServiceBoard */
@@ -1495,7 +1487,7 @@ button:active {
   width: 100%;
 }
 
-#service>div {
+#service > div {
   width: 95%;
   height: 100%;
   display: flex;
@@ -1503,7 +1495,7 @@ button:active {
   justify-content: center;
 }
 
-#service>div>div:first-child {
+#service > div > div:first-child {
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -1515,7 +1507,7 @@ button:active {
   margin-left: -6px;
 }
 
-#service>div>div:last-child {
+#service > div > div:last-child {
   display: flex;
   align-items: flex-end;
   justify-content: center;
@@ -1524,7 +1516,6 @@ button:active {
   width: 100%;
   height: 100%;
   padding: 2vh 1vw 1vw 8vh;
-
 }
 
 #service_categori button {
@@ -1539,7 +1530,7 @@ button:active {
 }
 
 /* 마지막에 보더 제거 */
-#service_board>div {
+#service_board > div {
   width: 100%;
   display: flex;
   align-items: center;
@@ -1571,8 +1562,8 @@ button:active {
 }
 
 #service_board_top #service_row {
-  color: #FF4E59;
-  background-color: #F2F2F2;
+  color: #ff4e59;
+  background-color: #f2f2f2;
 }
 
 #board_top_header {
@@ -1582,7 +1573,7 @@ button:active {
   width: 100%;
   height: 30%;
   min-height: 50px;
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
 }
 
 #board_top_title {
@@ -1613,8 +1604,6 @@ button:active {
   justify-content: center;
 }
 
-
-
 #service_row {
   display: flex;
   align-items: center;
@@ -1624,7 +1613,6 @@ button:active {
   min-height: 50px;
   max-height: 50px;
 }
-
 
 #row_tag {
   flex: 0.2;
@@ -1720,7 +1708,6 @@ button:active {
   padding-bottom: 10px;
 }
 
-
 #view_top {
   height: 30%;
   display: flex;
@@ -1740,7 +1727,7 @@ button:active {
 
 #view_top_title {
   height: 70%;
-  font-size: x-large
+  font-size: x-large;
 }
 
 #view_top_detail {
@@ -1787,19 +1774,19 @@ button:active {
 }
 
 #question_form div {
-  width: 100%
+  width: 100%;
 }
 
 #question_form_top {
   height: 30%;
 }
 
-#question_form_top>div:last-child {
+#question_form_top > div:last-child {
   padding-left: 30px;
-  height: 80%
+  height: 80%;
 }
 
-#question_form_top>div:last-child>div:last-child {
+#question_form_top > div:last-child > div:last-child {
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -1866,7 +1853,6 @@ button:active {
 #edit_btn_box button {
   margin: 0px 5px;
 }
-
 
 /* password_form */
 
