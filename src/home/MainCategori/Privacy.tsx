@@ -1,12 +1,12 @@
 import React, { useRef } from "react";
 import KakaoAdress from "./KakaoAdress";
-type propsData = {
+type PropsData = {
     address: string | null,
     addressData: (data: string) => void,
     allDataUpdate: (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void
 }
 
-const Privacy = ({ address, addressData, allDataUpdate }: propsData) => {
+const Privacy = ({ address, addressData, allDataUpdate }: PropsData) => {
     const name = useRef<HTMLInputElement>(null)
     const adress = useRef<HTMLInputElement>(null)
     const tel = useRef<HTMLInputElement>(null)

@@ -687,7 +687,7 @@ footer {
 
 .product {
   height: 516px;
-  width: 1920px;
+  width: 1900px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -1052,8 +1052,6 @@ label {
 #adress_input2 {
   margin-left: 50px;
 }
-
-/* 여기까지 했음!!!!!! */
 .privacy {
   flex: 0.4;
   display: flex;
@@ -1234,17 +1232,15 @@ button:active {
   box-shadow: none;
   transform: translateY(0);
 }
-/* 여기까지 */
 /* PhotoBoard */
 
 #photo_board {
-  width: 100%;
-  height: 100%;
+  width: 1900px;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 14.8vh;
-  margin-bottom: 1.5vh;
+  padding-top: 139px;
+  margin-bottom: 14.5px;
 }
 
 #photo_categori {
@@ -1262,12 +1258,12 @@ button:active {
 
 #photo_categori > div {
   border: 1px solid rgb(230, 210, 210);
-  height: 6%;
+  height: 45px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   padding-left: 18px;
-  width: 70%;
+  width: 210px;
   margin-left: 50px;
   margin-top: 5px;
   cursor: pointer;
@@ -1304,17 +1300,16 @@ button:active {
   padding-bottom: 30px;
   border-right: none;
   flex: 3;
-  width: 100%;
-  height: 100%;
-  padding-top: 4vh;
+  width: 1600px;
+  padding-top: 40px;
   min-height: 800px;
   border-top: none;
 }
 
 #photo_card {
   padding: 10px 100px;
-  width: 100%;
-  height: 50%;
+  width: 1600px;
+  height: 287px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -1325,8 +1320,8 @@ button:active {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 20%;
-  height: 100%;
+  width: 280px;
+  height: 267px;
   flex-direction: column;
 }
 
@@ -1344,12 +1339,12 @@ button:active {
   align-items: center;
   flex-direction: column;
   flex: 2;
-  width: 100%;
+  width: 280px;
   padding-top: 10px;
 }
 
 #current_img {
-  width: 100%;
+  width: 280px;
   max-height: 200px;
   min-height: 200px;
   border-radius: 4px;
@@ -1392,7 +1387,6 @@ button:active {
 }
 
 #card_categori li {
-  height: 100%;
   color: black;
   list-style: none;
   background-color: #388fe4;
@@ -1424,8 +1418,8 @@ button:active {
 }
 
 .zoom_photo {
-  width: 100%;
-  height: 100%;
+  width:1000px;
+  height: 600px;
 }
 
 #zoom_list {
@@ -1444,7 +1438,7 @@ button:active {
 .zoom_num {
   background-color: white;
   color: black;
-  font-size: 1.5rem;
+  font-size: 25px;
   font-weight: bold;
   margin: 0px 52px;
   padding: 15px 23px;
@@ -1474,6 +1468,7 @@ button:active {
   margin: "1rem";
 }
 
+/* 여기까지함 */
 /* ServiceBoard */
 #service {
   display: flex;
